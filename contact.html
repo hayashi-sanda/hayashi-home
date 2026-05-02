@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜仕出しはやし｜三田市の会席料理・給食弁当</title>
+  <meta name="description" content="仕出しはやしへのお問い合わせはこちら。会席料理・幕の内弁当・給食弁当の注文・ご相談はフォームまたはお電話にて。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ink:#1a1208; --cream:#f6f1e9; --warm:#fbf8f2; --gold:#b08828; --goldl:#cfa840; --rust:#7e3020; --stone:#6a5c4e; --mist:#e4dcd0; --dark:#18110a; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--warm); color: var(--ink); font-family: 'Noto Serif JP', serif; line-height: 1.9; }
+
+    header { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:0 44px; height:70px; background:rgba(251,248,242,0.97); backdrop-filter:blur(10px); border-bottom:1px solid var(--mist); box-shadow:0 2px 16px rgba(0,0,0,0.05); }
+    .logo { text-decoration:none; display:flex; flex-direction:column; gap:1px; }
+    .logo-main { font-family:'Zen Old Mincho',serif; font-size:21px; font-weight:700; letter-spacing:0.25em; color:var(--rust); line-height:1; }
+    .logo-main span { color:var(--gold); }
+    .logo-rule { width:100%; height:1px; background:linear-gradient(to right,var(--gold),transparent); margin:2px 0; }
+    .logo-sub { font-size:9.5px; letter-spacing:0.35em; color:var(--stone); }
+    nav { display:flex; align-items:center; gap:28px; }
+    nav a { text-decoration:none; font-size:12.5px; letter-spacing:0.15em; color:var(--stone); transition:color .3s; }
+    nav a:hover { color:var(--ink); }
+    nav a.active { color:var(--rust); border-bottom:1px solid var(--rust); }
+    .nav-tel { font-family:'Shippori Mincho B1',serif; font-size:16px; font-weight:700; color:var(--rust); border-left:1px solid var(--mist); padding-left:20px; }
+    .nav-sns { display:flex; gap:10px; border-left:1px solid var(--mist); padding-left:20px; }
+    .sns-btn { display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; text-decoration:none; transition:transform .25s; }
+    .sns-btn:hover { transform:scale(1.12); opacity:.85; }
+    .sns-btn.instagram { background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+    .sns-btn.line { background:#06c755; }
+    .sns-btn svg { width:16px; height:16px; fill:white; display:block; }
+
+    .page-hero { margin-top:70px; height:280px; background:linear-gradient(135deg,#1a0c06 0%,#2e1608 50%,#3a1e0c 100%); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+    .page-hero::before { content:'問'; position:absolute; right:-20px; top:-30px; font-family:'Zen Old Mincho',serif; font-size:280px; font-weight:700; color:rgba(176,136,40,0.07); line-height:1; pointer-events:none; }
+    .page-hero::after { content:''; position:absolute; top:30px; left:60px; right:60px; bottom:30px; border:1px solid rgba(176,136,40,0.2); pointer-events:none; }
+    .page-hero-inner { position:relative; z-index:2; text-align:center; color:white; }
+    .page-hero-en { font-size:10px; letter-spacing:0.45em; color:var(--goldl); border:1px solid rgba(176,136,40,.5); padding:4px 18px; margin-bottom:20px; display:inline-block; }
+    .page-hero-title { font-family:'Zen Old Mincho',serif; font-size:clamp(28px,4vw,44px); font-weight:400; letter-spacing:0.15em; }
+
+    .breadcrumb { padding:16px 48px; font-size:12px; color:var(--stone); }
+    .breadcrumb a { color:var(--stone); text-decoration:none; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .breadcrumb span { margin:0 8px; }
+
+    .content { max-width:860px; margin:0 auto; padding:64px 48px 80px; }
+
+    /* 電話案内 */
+    .tel-band { background:var(--cream); border:1px solid var(--mist); padding:36px 40px; margin-bottom:56px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .tel-label { font-size:11px; letter-spacing:0.3em; color:var(--stone); margin-bottom:8px; }
+    .tel-num { font-family:'Shippori Mincho B1',serif; font-size:38px; font-weight:700; color:var(--rust); letter-spacing:0.05em; line-height:1; }
+    .tel-note { font-size:12px; color:var(--stone); margin-top:6px; }
+    .tel-local strong { font-family:'Shippori Mincho B1',serif; font-size:20px; color:var(--ink); }
+    .tel-local { font-size:13px; color:var(--stone); }
+
+    /* セクションヘッダー */
+    .section-header { text-align:center; margin-bottom:40px; }
+    .section-en { display:block; font-size:10px; letter-spacing:.4em; color:var(--gold); text-transform:uppercase; margin-bottom:10px; }
+    .section-jp { font-family:'Zen Old Mincho',serif; font-size:clamp(18px,2.5vw,26px); letter-spacing:.12em; }
+    .section-rule { display:flex; align-items:center; justify-content:center; gap:14px; margin-top:14px; }
+    .section-rule::before,.section-rule::after { content:''; width:50px; height:1px; background:var(--gold); }
+    .section-rule span { color:var(--gold); }
+
+    .form-note { font-size:13px; color:var(--stone); line-height:2; margin-bottom:36px; text-align:center; }
+
+    /* フォーム */
+    .contact-form { background:white; border:1px solid var(--mist); padding:48px; }
+    .form-row { margin-bottom:28px; }
+    .form-label { display:flex; align-items:center; gap:8px; font-size:13.5px; letter-spacing:0.1em; margin-bottom:10px; font-weight:500; }
+    .badge-req { background:var(--rust); color:white; font-size:10px; padding:2px 8px; letter-spacing:0.1em; flex-shrink:0; }
+    .badge-opt { background:var(--stone); color:white; font-size:10px; padding:2px 8px; letter-spacing:0.1em; flex-shrink:0; }
+    .form-input, .form-select, .form-textarea {
+      width:100%; padding:12px 16px;
+      border:1px solid var(--mist); background:var(--warm);
+      font-family:'Noto Serif JP',serif; font-size:14px; color:var(--ink);
+      outline:none; transition:border-color .3s, background .3s;
+      -webkit-appearance:none; appearance:none;
+      border-radius:0;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color:var(--gold); background:white; }
+    .form-textarea { min-height:180px; resize:vertical; }
+    .form-select-wrap { position:relative; }
+    .form-select-wrap::after { content:'▼'; position:absolute; right:16px; top:50%; transform:translateY(-50%); font-size:10px; color:var(--stone); pointer-events:none; }
+    .form-row-half { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+
+    .form-submit-wrap { text-align:center; margin-top:40px; }
+    .form-submit { background:var(--dark); color:white; border:none; font-family:'Noto Serif JP',serif; font-size:14px; letter-spacing:0.3em; padding:16px 72px; cursor:pointer; transition:background .3s; }
+    .form-submit:hover { background:var(--rust); }
+    .form-privacy { font-size:11px; color:var(--stone); text-align:center; margin-top:16px; line-height:2; }
+
+    /* 送信完了 */
+    .success-box { display:none; background:var(--cream); border:1px solid var(--gold); padding:56px 40px; text-align:center; margin-bottom:48px; }
+    .success-box.show { display:block; }
+    .success-icon { font-size:52px; margin-bottom:20px; }
+    .success-title { font-family:'Zen Old Mincho',serif; font-size:24px; letter-spacing:0.1em; margin-bottom:16px; }
+    .success-desc { font-size:13.5px; color:var(--stone); line-height:2.2; }
+
+    footer { background:var(--dark); padding:48px; color:rgba(255,255,255,0.5); text-align:center; }
+    .footer-logo-main { font-family:'Zen Old Mincho',serif; font-size:20px; letter-spacing:0.25em; color:var(--goldl); margin-bottom:12px; }
+    .footer-addr { font-size:12px; line-height:2.2; margin-bottom:20px; }
+    .footer-nav { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-bottom:20px; }
+    .footer-nav a { text-decoration:none; font-size:12px; letter-spacing:0.15em; color:rgba(255,255,255,0.5); transition:color .3s; }
+    .footer-nav a:hover { color:var(--goldl); }
+    .footer-copy { font-size:11px; letter-spacing:0.15em; }
+
+    .page-top { position:fixed; bottom:28px; right:28px; width:44px; height:44px; background:var(--gold); color:white; text-decoration:none; display:flex; align-items:center; justify-content:center; font-size:18px; opacity:0; transform:translateY(12px); transition:opacity .3s,transform .3s,background .3s; z-index:300; }
+    .page-top.visible { opacity:1; transform:translateY(0); }
+    .page-top:hover { background:var(--rust); }
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal.shown { opacity:1; transform:translateY(0); }
+
+    @media (max-width:768px) {
+      header { padding:0 20px; } nav { display:none; }
+      .breadcrumb { padding:14px 20px; } .content { padding:48px 20px; }
+      .tel-band { flex-direction:column; padding:28px 24px; }
+      .contact-form { padding:28px 20px; }
+      .form-row-half { grid-template-columns:1fr; }
+      .page-hero::after { top:16px; left:20px; right:20px; bottom:16px; }
+    }
+  </style>
+</head>
+<body id="top">
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-main"><span>仕</span>出し　はやし</div>
+    <div class="logo-rule"></div>
+    <div class="logo-sub">HAYASHI · SANDA · HYOGO</div>
+  </a>
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="kaiseki.html">会席料理</a>
+    <a href="makunouchi.html">幕の内弁当</a>
+    <a href="kyushoku.html">給食弁当</a>
+    <a href="contact.html" class="active">お問い合わせ</a>
+    <span class="nav-tel">0120-139-884</span>
+    <div class="nav-sns">
+      <a href="https://www.instagram.com/koco2983/" target="_blank" rel="noopener" class="sns-btn instagram" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://lin.ee/1IJIjKw" target="_blank" rel="noopener" class="sns-btn line" title="LINE"><svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+    </div>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-en">CONTACT</div>
+    <h1 class="page-hero-title">お問い合わせ</h1>
+  </div>
+</div>
+
+<div class="breadcrumb"><a href="index.html">ホーム</a><span>›</span>お問い合わせ</div>
+
+<div class="content">
+
+  <!-- 送信完了メッセージ（送信後に表示） -->
+  <div class="success-box" id="successBox">
+    <div class="success-icon">✉️</div>
+    <div class="success-title">お問い合わせを受け付けました</div>
+    <p class="success-desc">
+      内容を確認の上、担当者より後日ご連絡いたします。<br>
+      お急ぎの場合はお電話にてお問い合わせください。<br><br>
+      <strong style="font-size:18px; color:var(--rust);">0120-139-884</strong><br>
+      受付時間 8:00〜18:00　年中無休
+    </p>
+  </div>
+
+  <!-- 電話案内 -->
+  <div class="tel-band reveal">
+    <div>
+      <div class="tel-label">📞 お電話でのお問い合わせ（通話料無料）</div>
+      <div class="tel-num">0120-139-884</div>
+      <div class="tel-note">受付時間 8:00〜18:00　年中無休</div>
+    </div>
+    <div>
+      <div class="tel-local">携帯・市外からは</div>
+      <div class="tel-local" style="margin-top:4px;"><strong>079-568-1011</strong></div>
+    </div>
+  </div>
+
+  <!-- フォームセクション -->
+  <div class="section-header reveal">
+    <span class="section-en">CONTACT FORM</span>
+    <div class="section-jp">メールでのお問い合わせ</div>
+    <div class="section-rule"><span>✦</span></div>
+  </div>
+
+  <p class="form-note reveal">
+    以下のフォームに必要事項をご入力の上、送信ボタンを押してください。<br>
+    担当者より後日ご連絡いたします。
+  </p>
+
+  <div class="contact-form reveal">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSc3oPLVxk0Nozy5xbR7iuJ5y0TrMCLvijg7YrmJeYiSXkx_9A/viewform?embedded=true"
+      width="100%"
+      height="1400"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      style="display:block;">
+      読み込んでいます…
+    </iframe>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo-main">仕出し　はやし</div>
+  <div class="footer-addr">〒669-1357 兵庫県三田市東本庄578-2　TEL: 0120-139-884 ／ 079-568-1011<br>営業時間: 8:00〜18:00　年中無休</div>
+  <nav class="footer-nav">
+    <a href="index.html">ホーム</a>
+    <a href="kaiseki.html">会席料理</a>
+    <a href="makunouchi.html">幕の内弁当</a>
+    <a href="kyushoku.html">給食弁当</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+  <p class="footer-copy">© 株式会社はやし. All Rights Reserved.</p>
+</footer>
+
+<a href="#top" class="page-top" id="pageTop">▲</a>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  const pt = document.getElementById('pageTop');
+  window.addEventListener('scroll', () => pt.classList.toggle('visible', window.scrollY > 300));
+</script>
+</body>
+</html>
