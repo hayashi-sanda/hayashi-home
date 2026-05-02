@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>給食弁当｜三田市の仕出しはやし</title>
+    <link rel="icon" type="image/jpeg" href="rogo.jpg">
   <meta name="description" content="仕出しはやしの給食弁当。三田市・篠山市・神戸市北区の企業・工場・事業所への毎日の給食配達を承っております。栄養バランスに配慮した献立。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,11 +162,7 @@
 <body id="top">
 
 <header>
-  <a href="index.html" class="logo">
-    <div class="logo-main"><span>仕</span>出し　はやし</div>
-    <div class="logo-rule"></div>
-    <div class="logo-sub">HAYASHI · SANDA · HYOGO</div>
-  </a>
+  <a href="index.html" class="logo"><img src="rogo.jpg" alt="仕出しはやし" style="height:50px; display:block;"></a>
   <nav>
     <a href="index.html">ホーム</a>
     <a href="kaiseki.html">会席料理</a>
@@ -233,12 +230,14 @@
     <div class="schedule-box">
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--mist);">
         <div class="schedule-img-wrap">
-          <img src="kondate1.jpg" alt="今月の献立①" style="width:100%; height:auto; display:block;"
-            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>献立①<br>準備中</div></div>'">
+          <img src="kondate1.jpg" alt="今月の献立①" style="width:100%; height:auto; display:block; cursor:zoom-in;"
+            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>献立①<br>準備中</div></div>'"
+            onclick="openLb(this.src)">
         </div>
         <div class="schedule-img-wrap">
-          <img src="kondate2.jpg" alt="今月の献立②" style="width:100%; height:auto; display:block;"
-            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>献立②<br>準備中</div></div>'">
+          <img src="kondate2.jpg" alt="今月の献立②" style="width:100%; height:auto; display:block; cursor:zoom-in;"
+            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>献立②<br>準備中</div></div>'"
+            onclick="openLb(this.src)">
         </div>
       </div>
     </div>
