@@ -1,1 +1,708 @@
-# hayashi-home
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ SEO基本設定 ═══ -->
+  <title>三田市の仕出し弁当・給食弁当・会席料理なら仕出しはやし｜篠山市・神戸市北区へ配達</title>
+  <meta name="description" content="兵庫県三田市の仕出し「はやし」。給食弁当・会席料理・幕の内弁当を三田市・篠山市・神戸市北区へ配達。企業・工場への給食手配、歓送迎会・法要・行楽弁当・オードブルもお任せください。フリーダイヤル0120-139-884。">
+  <meta name="keywords" content="三田 仕出し, 三田 給食, 三田市 給食弁当, 三田市 仕出し弁当, 三田市 会席料理, 三田市 弁当 配達, 仕出しはやし, 篠山市 仕出し, 神戸市北区 仕出し, 三田 給食 配達, 三田 オードブル, 三田 幕の内弁当">
+  <meta name="author" content="仕出しはやし">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.hayashi-delivery.com/">
+
+  <!-- ═══ OGP（SNSシェア時の表示） ═══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="三田市の仕出し弁当・給食弁当・会席料理なら仕出しはやし">
+  <meta property="og:description" content="兵庫県三田市の仕出し「はやし」。会席料理・幕の内弁当・給食弁当を三田市・篠山市・神戸市北区へ配達。お気軽にご相談ください。">
+  <meta property="og:url" content="https://www.hayashi-delivery.com/">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="仕出しはやし">
+
+  <!-- ═══ 構造化データ（Googleリッチリザルト用） ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "仕出しはやし",
+    "alternateName": ["はやし", "仕出し はやし"],
+    "description": "兵庫県三田市の仕出し・弁当配達。会席料理・幕の内弁当・給食弁当を三田市・篠山市・神戸市北区へお届けします。",
+    "url": "https://www.hayashi-delivery.com/",
+    "telephone": ["0120-139-884", "079-568-1011"],
+    "priceRange": "¥¥",
+    "servesCuisine": ["日本料理", "仕出し料理", "弁当"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "東本庄578-2",
+      "addressLocality": "三田市",
+      "addressRegion": "兵庫県",
+      "postalCode": "669-1357",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.8889,
+      "longitude": 135.2264
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/koco2983/"
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "三田市"},
+      {"@type": "City", "name": "篠山市"},
+      {"@type": "AdministrativeArea", "name": "神戸市北区"}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "仕出しメニュー",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "FoodService", "name": "会席料理"}},
+        {"@type": "Offer", "itemOffered": {"@type": "FoodService", "name": "幕の内弁当"}},
+        {"@type": "Offer", "itemOffered": {"@type": "FoodService", "name": "給食弁当"}},
+        {"@type": "Offer", "itemOffered": {"@type": "FoodService", "name": "オードブル"}},
+        {"@type": "Offer", "itemOffered": {"@type": "FoodService", "name": "寿司盛り合わせ"}}
+      ]
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Shippori+Mincho+B1:wght@400;500;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #1a1208;
+      --cream:  #f6f1e9;
+      --warm:   #fbf8f2;
+      --gold:   #b08828;
+      --goldl:  #cfa840;
+      --rust:   #7e3020;
+      --stone:  #6a5c4e;
+      --mist:   #e4dcd0;
+      --dark:   #18110a;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--warm); color: var(--ink); font-family: 'Noto Serif JP', serif; line-height: 1.9; }
+
+    /* ══ HEADER ══ */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 44px; height: 70px;
+      background: rgba(251,248,242,0.97); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--mist);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+    }
+
+    /* TEXT LOGO — 自作 */
+    .logo { text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; gap: 1px; }
+    .logo-main {
+      font-family: 'Zen Old Mincho', serif;
+      font-size: 21px; font-weight: 700;
+      letter-spacing: 0.25em;
+      color: var(--rust);
+      line-height: 1;
+    }
+    .logo-main span { color: var(--gold); margin-right: 2px; }
+    .logo-sub {
+      font-family: 'Shippori Mincho B1', serif;
+      font-size: 9.5px; letter-spacing: 0.35em;
+      color: var(--stone); line-height: 1;
+    }
+    .logo-rule { width: 100%; height: 1px; background: linear-gradient(to right, var(--gold), transparent); margin: 2px 0; }
+
+    nav { display: flex; align-items: center; gap: 30px; }
+    nav a {
+      text-decoration: none; font-size: 12.5px; letter-spacing: 0.15em; color: var(--stone);
+      transition: color .3s; position: relative;
+    }
+    nav a::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:1px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .3s; }
+    nav a:hover { color: var(--ink); }
+    nav a:hover::after { transform: scaleX(1); }
+    .nav-tel { font-family:'Shippori Mincho B1',serif; font-size:17px; font-weight:700; letter-spacing:.04em; color:var(--rust); border-left:1px solid var(--mist); padding-left:22px; }
+    .nav-sns { display:flex; align-items:center; gap:10px; border-left:1px solid var(--mist); padding-left:22px; }
+    .sns-btn {
+      display:flex; align-items:center; justify-content:center;
+      width:34px; height:34px; border-radius:50%;
+      text-decoration:none; transition:transform .25s, opacity .25s;
+    }
+    .sns-btn:hover { transform:scale(1.12); opacity:.85; }
+    .sns-btn.instagram { background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+    .sns-btn.line      { background:#06c755; }
+    .sns-btn svg { width:18px; height:18px; fill:white; display:block; }
+
+    /* フッターSNS */
+    .footer-sns { display:flex; gap:12px; margin-top:16px; }
+    .footer-sns-btn {
+      display:flex; align-items:center; gap:8px;
+      text-decoration:none; font-size:12px; letter-spacing:.15em;
+      color:rgba(255,255,255,.6); padding:8px 16px;
+      border:1px solid rgba(255,255,255,.15); transition:border-color .3s, color .3s;
+    }
+    .footer-sns-btn:hover { border-color:var(--goldl); color:var(--goldl); }
+    .footer-sns-btn svg { width:15px; height:15px; fill:currentColor; }
+
+    /* ══ HERO (自作スライドショー) ══ */
+    .hero { margin-top: 70px; position: relative; overflow: hidden; height: clamp(480px, 72vh, 720px); background: var(--dark); }
+
+    .slide { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 1.5s ease; }
+    .slide.active { opacity: 1; z-index: 2; }
+
+    /* 各スライドの背景 — 食材イメージの抽象グラデーション */
+    .slide-1 {
+      background:
+        radial-gradient(ellipse 60% 70% at 70% 50%, rgba(120,60,20,.85) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 20% 60%, rgba(60,20,10,.9) 0%, transparent 80%),
+        linear-gradient(135deg, #1a0c06 0%, #3a1a0a 50%, #5a2a10 100%);
+    }
+    .slide-2 {
+      background:
+        radial-gradient(ellipse 60% 70% at 30% 50%, rgba(20,60,40,.85) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 75% 60%, rgba(10,30,20,.9) 0%, transparent 80%),
+        linear-gradient(135deg, #061a10 0%, #0a3020 50%, #104030 100%);
+    }
+    .slide-3 {
+      background:
+        radial-gradient(ellipse 60% 70% at 60% 40%, rgba(90,60,10,.85) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 25% 65%, rgba(40,25,5,.9) 0%, transparent 80%),
+        linear-gradient(135deg, #1a1206 0%, #352412 50%, #50381a 100%);
+    }
+
+    /* 和紙っぽいテクスチャオーバーレイ */
+    .slide::before {
+      content:''; position:absolute; inset:0; z-index:0;
+      background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3l2-2M0 2l1-1M3 4l1-1' stroke='%23ffffff' stroke-opacity='0.04' stroke-width='1'/%3E%3C/svg%3E");
+      pointer-events:none;
+    }
+
+    /* 装飾ライン */
+    .slide::after {
+      content:''; position:absolute;
+      top:40px; left:60px; right:60px; bottom:40px;
+      border:1px solid rgba(176,136,40,0.25);
+      z-index:1; pointer-events:none;
+    }
+
+    .slide-content {
+      position: relative; z-index: 3;
+      text-align: center; color: white; padding: 0 40px;
+    }
+
+    .slide-badge {
+      display: inline-block;
+      font-size: 10px; letter-spacing: 0.45em;
+      color: var(--goldl); border: 1px solid rgba(176,136,40,.6);
+      padding: 5px 20px; margin-bottom: 32px;
+      animation: fadeUp .8s ease both;
+    }
+
+    .slide-title {
+      font-family: 'Zen Old Mincho', serif;
+      font-size: clamp(30px, 5vw, 58px);
+      font-weight: 400; letter-spacing: 0.12em;
+      line-height: 1.5; margin-bottom: 20px;
+      animation: fadeUp .8s .15s ease both;
+      text-shadow: 0 2px 20px rgba(0,0,0,.4);
+    }
+
+    .slide-sub {
+      font-size: 13px; letter-spacing: 0.25em;
+      color: rgba(255,255,255,.65);
+      animation: fadeUp .8s .3s ease both;
+    }
+
+    /* 右端の縦書き装飾 */
+    .hero-vert {
+      position: absolute; right: 44px; top: 50%; transform: translateY(-50%);
+      z-index: 5; writing-mode: vertical-rl;
+      font-family: 'Zen Old Mincho', serif;
+      font-size: 11px; letter-spacing: .4em;
+      color: rgba(176,136,40,.45);
+      pointer-events: none;
+    }
+
+    /* スクロールヒント */
+    .scroll-hint {
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .scroll-dots { display: flex; gap: 10px; }
+    .sdot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.35); border: 1px solid rgba(255,255,255,.5); cursor: pointer; transition: background .3s, transform .3s; }
+    .sdot.active { background: var(--goldl); transform: scale(1.3); }
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+
+    /* ══ SECTIONS ══ */
+    section { padding: 80px 48px; }
+    .section-header { text-align: center; margin-bottom: 52px; }
+    .section-en { display:block; font-size:10px; letter-spacing:.4em; color:var(--gold); text-transform:uppercase; margin-bottom:10px; }
+    .section-jp { font-family:'Zen Old Mincho',serif; font-size:clamp(20px,2.8vw,30px); font-weight:400; letter-spacing:.12em; }
+    .section-rule { display:flex; align-items:center; justify-content:center; gap:14px; margin-top:16px; }
+    .section-rule::before,.section-rule::after { content:''; width:56px; height:1px; background:var(--gold); }
+    .section-rule span { color:var(--gold); font-size:16px; }
+
+    /* ══ GREETING ══ */
+    .greeting { background: var(--cream); }
+    .greeting-inner { max-width:740px; margin:0 auto; text-align:center; }
+    .greeting-inner p { font-size:14.5px; line-height:2.3; color:var(--stone); }
+    .greeting-inner p+p { margin-top:16px; }
+    .greeting-inner strong { color:var(--ink); font-weight:500; }
+
+    /* ══ SEASONAL HEADER — 自作デザイン ══ */
+    .seasonal { background: var(--warm); }
+
+    .season-banner {
+      max-width: 900px; margin: 0 auto 48px;
+      position: relative; overflow: hidden;
+      background: linear-gradient(120deg, #1a0c06 0%, #2e1608 40%, #3a1e0c 70%, #1a0c06 100%);
+      padding: 44px 56px;
+      border: 1px solid rgba(176,136,40,.35);
+    }
+    .season-banner::before {
+      content:''; position:absolute; inset:6px;
+      border: 1px solid rgba(176,136,40,.2); pointer-events:none;
+    }
+    .season-banner::after {
+      content:'旬'; position:absolute;
+      right:-10px; top:-20px;
+      font-family:'Zen Old Mincho',serif;
+      font-size:160px; font-weight:700;
+      color:rgba(176,136,40,.07); line-height:1;
+      pointer-events:none;
+    }
+    .season-banner-inner { position:relative; z-index:2; display:flex; align-items:center; gap:40px; }
+    .season-divider { width:1px; height:80px; background:rgba(176,136,40,.4); flex-shrink:0; }
+    .season-label { font-size:10px; letter-spacing:.4em; color:var(--goldl); margin-bottom:10px; }
+    .season-title { font-family:'Zen Old Mincho',serif; font-size:clamp(18px,2.5vw,26px); font-weight:400; letter-spacing:.15em; color:white; line-height:1.6; }
+    .season-desc { font-size:12.5px; letter-spacing:.15em; color:rgba(255,255,255,.6); line-height:2; margin-top:8px; }
+
+    /* ══ FOOD GRID ══ */
+    .food-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:900px; margin:0 auto 16px; }
+    .food-card { background:white; border:1px solid var(--mist); overflow:hidden; transition:transform .35s, box-shadow .35s; cursor:pointer; }
+    .food-card:hover { transform:translateY(-5px); box-shadow:0 16px 40px rgba(28,20,16,.11); }
+    .food-card img { width:100%; height:200px; object-fit:cover; display:block; transition:transform .5s; }
+    .food-card:hover img { transform:scale(1.05); }
+    .food-cap { padding:14px 16px; font-size:12.5px; line-height:1.7; color:var(--stone); text-align:center; }
+    .food-cap strong { color:var(--ink); }
+    .food-note { max-width:900px; margin:0 auto; text-align:center; font-size:12px; color:var(--stone); line-height:2; }
+
+    /* ══ CATEGORY CARDS — 自作デザイン ══ */
+    .cat-section { background: var(--cream); }
+    .cat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:940px; margin:0 auto; }
+
+    .cat-card {
+      background: white; border: 1px solid var(--mist);
+      overflow: hidden; text-decoration: none; color: inherit;
+      display: block; transition: transform .35s, box-shadow .35s;
+    }
+    .cat-card:hover { transform: translateY(-5px); box-shadow: 0 16px 44px rgba(0,0,0,.10); }
+
+    .cat-visual {
+      height: 180px; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cat-visual-kaiseki { background: linear-gradient(135deg, #1a0c06, #4a2010, #6a3018); }
+    .cat-visual-maku    { background: linear-gradient(135deg, #0a1a0c, #1a4020, #2a5828); }
+    .cat-visual-kyushoku{ background: linear-gradient(135deg, #0a0e1a, #182038, #1e2c4e); }
+
+    .cat-kanji {
+      font-family: 'Zen Old Mincho', serif;
+      font-size: 80px; font-weight: 700;
+      color: rgba(255,255,255,.12);
+      line-height: 1; user-select: none;
+      transition: transform .5s;
+    }
+    .cat-card:hover .cat-kanji { transform: scale(1.08); }
+
+    .cat-gold-line {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+
+    .cat-tag {
+      position: absolute; top: 16px; left: 16px;
+      font-size: 9.5px; letter-spacing: .35em;
+      color: var(--goldl); border: 1px solid rgba(176,136,40,.6);
+      padding: 3px 12px; background: rgba(0,0,0,.3);
+    }
+
+    .cat-body { padding: 22px 22px 26px; }
+    .cat-title-jp { font-family:'Zen Old Mincho',serif; font-size:20px; letter-spacing:.1em; margin-bottom:8px; }
+    .cat-desc { font-size:12.5px; line-height:1.9; color:var(--stone); margin-bottom:18px; }
+    .cat-more {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:11.5px; letter-spacing:.2em; color:var(--gold);
+      border-bottom:1px solid var(--gold); padding-bottom:2px;
+      transition: gap .3s;
+    }
+    .cat-card:hover .cat-more { gap: 14px; }
+
+    /* ══ INFO STRIP ══ */
+    .info-strip { background:var(--rust); display:grid; grid-template-columns:repeat(3,1fr); padding:48px; }
+    .info-item { text-align:center; color:white; padding:0 32px; border-right:1px solid rgba(255,255,255,.2); }
+    .info-item:last-child { border-right:none; }
+    .info-icon { font-size:26px; margin-bottom:10px; }
+    .info-label { font-size:10px; letter-spacing:.35em; color:rgba(255,255,255,.65); margin-bottom:8px; }
+    .info-value { font-family:'Shippori Mincho B1',serif; font-size:16px; font-weight:700; line-height:1.6; }
+    .info-note { font-size:11px; color:rgba(255,255,255,.6); margin-top:6px; }
+
+    /* ══ CONTACT ══ */
+    .contact { background:var(--warm); text-align:center; }
+    .contact-box { display:inline-block; padding:52px 72px; background:white; border:1px solid var(--mist); position:relative; }
+    .contact-box::before { content:''; position:absolute; top:7px; left:7px; right:7px; bottom:7px; border:1px solid var(--mist); pointer-events:none; }
+    .contact-desc { font-size:13.5px; color:var(--stone); line-height:2.1; margin-bottom:32px; }
+    .contact-tel { display:block; font-family:'Shippori Mincho B1',serif; font-size:42px; font-weight:700; color:var(--rust); letter-spacing:.05em; margin-bottom:4px; }
+    .contact-free { font-size:12px; color:var(--stone); letter-spacing:.2em; margin-bottom:6px; }
+    .contact-local { font-size:13px; color:var(--stone); margin-bottom:32px; }
+    .contact-btn { display:inline-block; background:var(--ink); color:white; text-decoration:none; font-size:13px; letter-spacing:.25em; padding:13px 44px; transition:background .3s; }
+    .contact-btn:hover { background:var(--rust); }
+
+    /* ══ FOOTER ══ */
+    footer { background:var(--dark); padding:56px 48px 28px; color:rgba(255,255,255,.5); }
+    .footer-inner { max-width:1040px; margin:0 auto; display:grid; grid-template-columns:auto 1fr; gap:48px; align-items:start; padding-bottom:36px; border-bottom:1px solid rgba(255,255,255,.1); }
+
+    /* フッターのテキストロゴ */
+    .footer-logo { text-decoration:none; }
+    .footer-logo-main { font-family:'Zen Old Mincho',serif; font-size:22px; font-weight:700; letter-spacing:.25em; color:var(--goldl); line-height:1; margin-bottom:6px; }
+    .footer-logo-sub { font-size:9px; letter-spacing:.35em; color:rgba(255,255,255,.35); }
+
+    .footer-right { display:flex; justify-content:space-between; align-items:start; }
+    .footer-addr { font-size:12.5px; line-height:2.1; }
+    .footer-nav { display:flex; flex-direction:column; gap:10px; text-align:right; }
+    .footer-nav a { text-decoration:none; font-size:12px; letter-spacing:.15em; color:rgba(255,255,255,.5); transition:color .3s; }
+    .footer-nav a:hover { color:var(--goldl); }
+    .footer-copy { text-align:center; margin-top:24px; font-size:11px; letter-spacing:.15em; }
+
+    /* PAGE TOP */
+    .page-top { position:fixed; bottom:28px; right:28px; width:44px; height:44px; background:var(--gold); color:white; text-decoration:none; display:flex; align-items:center; justify-content:center; font-size:18px; opacity:0; transform:translateY(12px); transition:opacity .3s,transform .3s,background .3s; z-index:300; }
+    .page-top.visible { opacity:1; transform:translateY(0); }
+    .page-top:hover { background:var(--rust); }
+
+    /* REVEAL */
+    .reveal { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal.shown { opacity:1; transform:translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width:860px) {
+      header { padding:0 20px; }
+      nav { display:none; }
+      section { padding:60px 20px; }
+      .slide::after { top:20px; left:20px; right:20px; bottom:20px; }
+      .hero-vert { display:none; }
+      .season-banner { padding:30px 28px; }
+      .season-banner-inner { flex-direction:column; gap:20px; }
+      .season-divider { width:60px; height:1px; }
+      .food-grid { grid-template-columns:repeat(2,1fr); }
+      .cat-grid { grid-template-columns:1fr; }
+      .info-strip { grid-template-columns:1fr; gap:28px; padding:40px 24px; }
+      .info-item { border-right:none; border-bottom:1px solid rgba(255,255,255,.18); padding-bottom:28px; }
+      .info-item:last-child { border-bottom:none; }
+      .contact-box { padding:36px 24px; }
+      .contact-tel { font-size:32px; }
+      .footer-inner { grid-template-columns:1fr; gap:24px; }
+      .footer-right { flex-direction:column; gap:24px; }
+      .footer-nav { text-align:left; }
+    }
+    @media (max-width:520px) {
+      .food-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body id="top">
+
+<!-- ══ HEADER ══ -->
+<header>
+  <a href="#top" class="logo">
+    <div class="logo-main"><span>仕</span>出し　はやし</div>
+    <div class="logo-rule"></div>
+    <div class="logo-sub">HAYASHI · SANDA · HYOGO</div>
+  </a>
+  <nav>
+    <a href="#greeting">ご挨拶</a>
+    <a href="#seasonal">季節料理</a>
+    <a href="#menu">お料理案内</a>
+    <a href="#contact">お問い合わせ</a>
+    <span class="nav-tel">0120-139-884</span>
+    <div class="nav-sns">
+      <a href="https://www.instagram.com/koco2983/" target="_blank" rel="noopener" class="sns-btn instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://lin.ee/1IJIjKw" target="_blank" rel="noopener" class="sns-btn line" title="LINE">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- ══ HERO SLIDESHOW (自作) ══ -->
+<div class="hero" id="top-hero">
+  <div class="slide slide-1 active">
+    <div class="slide-content">
+      <div class="slide-badge">KAISEKI · BANQUET</div>
+      <h1 class="slide-title">春の宴に<br>彩りを添えて</h1>
+      <p class="slide-sub">歓送迎会・ご法事・お祝い事に</p>
+    </div>
+  </div>
+  <div class="slide slide-2">
+    <div class="slide-content">
+      <div class="slide-badge">MAKUNOUCHI · OKAZARI</div>
+      <h1 class="slide-title">行楽の一日を<br>丁寧なお弁当で</h1>
+      <p class="slide-sub">幕の内弁当・オードブル・寿司盛り合わせ</p>
+    </div>
+  </div>
+  <div class="slide slide-3">
+    <div class="slide-content">
+      <div class="slide-badge">KYUSHOKU · DELIVERY</div>
+      <h1 class="slide-title">毎日の食事を<br>心を込めて</h1>
+      <p class="slide-sub">三田市・篠山市・神戸市北区へ配達</p>
+    </div>
+  </div>
+
+  <div class="hero-vert">三田市東本庄　仕出しはやし</div>
+
+  <div class="scroll-hint">
+    <div class="scroll-dots">
+      <div class="sdot active" onclick="goSlide(0)"></div>
+      <div class="sdot" onclick="goSlide(1)"></div>
+      <div class="sdot" onclick="goSlide(2)"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ GREETING ══ -->
+<section class="greeting" id="greeting">
+  <div class="section-header reveal">
+    <span class="section-en">GREETING</span>
+    <h1 class="section-jp">三田市の仕出し弁当・給食弁当・会席料理なら仕出しはやし</h1>
+    <div class="section-rule"><span>✦</span></div>
+  </div>
+  <div class="greeting-inner reveal">
+    <p>兵庫県三田市東本庄にある<strong>仕出し「はやし」</strong>は、<strong>三田市・篠山市・神戸市北区</strong>を中心に<br>
+    会席料理、幕の内弁当、給食弁当を配達しております。</p>
+    <p>行楽弁当やパーティーのオードブルもご用意しております。<br>
+    ご予算に応じてお作りすることができますので、お気軽にご相談ください。</p>
+  </div>
+</section>
+
+<!-- ══ SEASONAL ══ -->
+<section class="seasonal" id="seasonal">
+  <div class="section-header reveal">
+    <span class="section-en">SEASONAL</span>
+    <h2 class="section-jp">はやしの季節料理</h2>
+    <div class="section-rule"><span>✦</span></div>
+  </div>
+
+  <!-- 自作バナー -->
+  <div class="season-banner reveal">
+    <div class="season-banner-inner">
+      <div>
+        <div class="season-label">SEASON · MENU</div>
+        <div class="season-title">はやしの料理で<br>華やかに</div>
+      </div>
+      <div class="season-divider"></div>
+      <div>
+        <div class="season-desc">
+          旬の食材を丁寧に仕上げた<br>
+          会席料理・幕の内弁当・オードブル<br>
+          ご予算に応じてお作りします
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 料理写真（単品写真はそのまま使用） -->
+  <div class="food-grid">
+    <div class="food-card reveal">
+      <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/15_1.jpg" alt="三田市の仕出し 幕の内弁当 3600円" loading="lazy">
+      <div class="food-cap">幕の内弁当<br><strong>3,600円</strong>（税別）</div>
+    </div>
+    <div class="food-card reveal">
+      <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/6_1.jpg" alt="三田市の仕出し 碗盛膳 3600円" loading="lazy">
+      <div class="food-cap">碗盛膳<br><strong>3,600円</strong>（税別）</div>
+    </div>
+    <div class="food-card reveal">
+      <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/1573177128_1.jpg" alt="三田市の仕出し 花形弁当 3600円" loading="lazy">
+      <div class="food-cap">花形弁当　<strong>3,600円</strong>（税別）<br>33cm × 33cm</div>
+    </div>
+    <div class="food-card reveal">
+      <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/14_1.jpg" alt="三田市の仕出し 幕の内弁当 2160円" loading="lazy">
+      <div class="food-cap">幕の内弁当<br><strong>2,160円</strong>（税別）</div>
+    </div>
+    <div class="food-card reveal">
+      <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/3_1.jpg" alt="三田市の仕出し パーティー用オードブル 15000円" loading="lazy">
+      <div class="food-cap">オードブル　<strong>15,000円</strong>（税別）<br>直径50cm</div>
+    </div>
+    <div class="food-card reveal">
+      <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/1_1.jpg" alt="寿司盛り合わせ">
+      <div class="food-cap">寿司盛り合わせ（4人前）<br><strong>8,000円</strong>（税別）直径40cm</div>
+    </div>
+  </div>
+  <p class="food-note" style="margin-top:20px;">
+    ※写真は一例です。内容はご予算に応じてお作りできます。<br>
+    ※地域・個数によっては配達できない場合もございます。あらかじめご確認ください。
+  </p>
+</section>
+
+<!-- ══ MENU CATEGORIES (自作カード) ══ -->
+<section class="cat-section" id="menu">
+  <div class="section-header reveal">
+    <span class="section-en">OUR MENU</span>
+    <h2 class="section-jp">お料理のご案内</h2>
+    <div class="section-rule"><span>✦</span></div>
+  </div>
+  <div class="cat-grid">
+
+    <a href="#" class="cat-card reveal">
+      <div class="cat-visual cat-visual-kaiseki">
+        <div class="cat-kanji">会</div>
+        <div class="cat-gold-line"></div>
+        <div class="cat-tag">KAISEKI</div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-title-jp">会席料理</div>
+        <p class="cat-desc">冠婚葬祭・法要・ご宴会など、ハレの席に相応しい会席料理をご用意いたします。旬の食材を活かした一品をお届けします。</p>
+        <span class="cat-more">詳しく見る →</span>
+      </div>
+    </a>
+
+    <a href="#" class="cat-card reveal">
+      <div class="cat-visual cat-visual-maku">
+        <div class="cat-kanji">弁</div>
+        <div class="cat-gold-line"></div>
+        <div class="cat-tag">MAKUNOUCHI</div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-title-jp">幕の内弁当</div>
+        <p class="cat-desc">行楽・会議・パーティーに最適な幕の内弁当。オードブルや寿司盛り合わせも承っております。ご予算に応じてご相談ください。</p>
+        <span class="cat-more">詳しく見る →</span>
+      </div>
+    </a>
+
+    <a href="#" class="cat-card reveal">
+      <div class="cat-visual cat-visual-kyushoku">
+        <div class="cat-kanji">給</div>
+        <div class="cat-gold-line"></div>
+        <div class="cat-tag">KYUSHOKU</div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-title-jp">給食弁当</div>
+        <p class="cat-desc">三田市・篠山市・神戸市北区の企業・工場・事業所への給食弁当配達を承っております。毎日の昼食を責任をもってお届けします。栄養バランスにも配慮した献立です。</p>
+        <span class="cat-more">詳しく見る →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ══ INFO STRIP ══ -->
+<div class="info-strip">
+  <div class="info-item">
+    <div class="info-icon">📍</div>
+    <div class="info-label">所在地</div>
+    <div class="info-value">〒669-1357<br>兵庫県三田市東本庄578-2</div>
+  </div>
+  <div class="info-item">
+    <div class="info-icon">🕗</div>
+    <div class="info-label">営業時間</div>
+    <div class="info-value">8:00 〜 18:00</div>
+    <div class="info-note">年中無休（年末年始は要確認）</div>
+  </div>
+  <div class="info-item">
+    <div class="info-icon">🚚</div>
+    <div class="info-label">配達エリア</div>
+    <div class="info-value">三田市・篠山市<br>神戸市北区</div>
+    <div class="info-note">地域・個数により要確認</div>
+  </div>
+</div>
+
+<!-- ══ CONTACT ══ -->
+<section class="contact" id="contact">
+  <div class="section-header reveal">
+    <span class="section-en">CONTACT</span>
+    <h2 class="section-jp">お問い合わせ</h2>
+    <div class="section-rule"><span>✦</span></div>
+  </div>
+  <div class="contact-box reveal">
+    <p class="contact-desc">ご注文・お見積もり・配達エリアのご確認など<br>お気軽にお電話またはフォームよりお問い合わせください。</p>
+    <span class="contact-tel">0120-139-884</span>
+    <p class="contact-free">通話料無料 ／ 受付時間 8:00〜18:00</p>
+    <p class="contact-local">携帯・市外からは　<strong style="color:var(--ink);font-size:15px;">079-568-1011</strong></p>
+    <a href="#" class="contact-btn">メールでお問い合わせ</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <a href="#top" class="footer-logo">
+      <div class="footer-logo-main">仕出し　はやし</div>
+      <div class="footer-logo-sub">HAYASHI · SANDA · HYOGO</div>
+    </a>
+    <div class="footer-right">
+      <div class="footer-addr">
+        〒669-1357 兵庫県三田市東本庄578-2<br>
+        TEL: 0120-139-884 ／ 079-568-1011<br>
+        営業時間: 8:00〜18:00　年中無休
+      </div>
+      <div class="footer-sns">
+        <a href="https://www.instagram.com/koco2983/" target="_blank" rel="noopener" class="footer-sns-btn">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </a>
+        <a href="https://lin.ee/1IJIjKw" target="_blank" rel="noopener" class="footer-sns-btn">
+          <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          LINE 友だち追加
+        </a>
+      </div>
+      <nav class="footer-nav">
+        <a href="#top">ホーム</a>
+        <a href="#greeting">ご挨拶</a>
+        <a href="#menu">会席料理</a>
+        <a href="#menu">幕の内弁当</a>
+        <a href="#menu">給食弁当</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </div>
+  <p class="footer-copy">© 株式会社はやし. All Rights Reserved.</p>
+</footer>
+
+<a href="#top" class="page-top" id="pageTop">▲</a>
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots   = document.querySelectorAll('.sdot');
+
+  function goSlide(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  setInterval(() => goSlide(current + 1), 5500);
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('shown'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  const pageTop = document.getElementById('pageTop');
+  window.addEventListener('scroll', () => {
+    pageTop.classList.toggle('visible', window.scrollY > 400);
+  });
+</script>
+</body>
+</html>
