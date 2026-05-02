@@ -232,28 +232,14 @@
     <h2>今月の献立</h2>
     <div class="schedule-box">
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--mist);">
-        <div class="schedule-img-wrap" id="scheduleWrap1">
-          <div class="schedule-placeholder" id="schedulePlaceholder1">
-            <div class="placeholder-icon">📅</div>
-            <div class="placeholder-text">献立表①<br>準備中</div>
-          </div>
-          <img id="scheduleImg1" src="" alt="今月の献立①" style="display:none; width:100%; height:auto;">
+        <div class="schedule-img-wrap">
+          <img src="kondate1.jpg" alt="今月の献立①" style="width:100%; height:auto; display:block;"
+            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>献立①<br>準備中</div></div>'">
         </div>
-        <div class="schedule-img-wrap" id="scheduleWrap2">
-          <div class="schedule-placeholder" id="schedulePlaceholder2">
-            <div class="placeholder-icon">📅</div>
-            <div class="placeholder-text">献立表②<br>準備中</div>
-          </div>
-          <img id="scheduleImg2" src="" alt="今月の献立②" style="display:none; width:100%; height:auto;">
+        <div class="schedule-img-wrap">
+          <img src="kondate2.jpg" alt="今月の献立②" style="width:100%; height:auto; display:block;"
+            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>献立②<br>準備中</div></div>'">
         </div>
-      </div>
-      <div class="admin-upload-row" id="scheduleUploadRow" style="display:none;">
-        <label class="upload-btn" for="scheduleFile1">📤 献立①</label>
-        <input type="file" id="scheduleFile1" accept="image/*" style="display:none;">
-        <button class="delete-btn" id="scheduleDelete1">削除①</button>
-        <label class="upload-btn" for="scheduleFile2">📤 献立②</label>
-        <input type="file" id="scheduleFile2" accept="image/*" style="display:none;">
-        <button class="delete-btn" id="scheduleDelete2">削除②</button>
       </div>
     </div>
   </div>
@@ -266,67 +252,32 @@
       <!-- オリジナル -->
       <div class="menu-ex-card">
         <div class="menu-ex-badge original">オリジナル</div>
-        <div class="menu-ex-img-wrap" id="originalWrap">
-          <div class="menu-ex-placeholder" id="originalPlaceholder">
-            <div class="placeholder-icon">🍱</div>
-            <div class="placeholder-text">オリジナルメニュー<br>画像を準備中</div>
-          </div>
-          <img id="originalImg" src="" alt="オリジナルメニュー" style="display:none;">
+        <div class="menu-ex-img-wrap">
+          <img src="original.jpg" alt="オリジナルメニュー" style="width:100%; height:220px; object-fit:cover; display:block; cursor:zoom-in;"
+            onerror="this.parentNode.innerHTML='<div class=\'menu-ex-placeholder\'><div class=\'placeholder-icon\'>🍱</div><div class=\'placeholder-text\'>オリジナルメニュー<br>画像準備中</div></div>'"
+            onclick="openLb(this.src)">
         </div>
         <div class="menu-ex-body">
           <div class="menu-ex-name">オリジナル弁当</div>
           <div class="menu-ex-desc">ご飯・メイン・副菜３品の基本セット。毎日飽きないよう週替わりで献立を変えています。</div>
-        </div>
-        <div class="admin-upload-row" id="originalUploadRow" style="display:none;">
-          <label class="upload-btn" for="originalFile">📤 画像を変更</label>
-          <input type="file" id="originalFile" accept="image/*" style="display:none;">
-          <button class="delete-btn" id="originalDelete">削除</button>
         </div>
       </div>
 
       <!-- スペシャル -->
       <div class="menu-ex-card">
         <div class="menu-ex-badge special">スペシャル</div>
-        <div class="menu-ex-img-wrap" id="specialWrap">
-          <div class="menu-ex-placeholder" id="specialPlaceholder">
-            <div class="placeholder-icon">✨</div>
-            <div class="placeholder-text">スペシャルメニュー<br>画像を準備中</div>
-          </div>
-          <img id="specialImg" src="" alt="スペシャルメニュー" style="display:none;">
+        <div class="menu-ex-img-wrap">
+          <img src="special.jpg" alt="スペシャルメニュー" style="width:100%; height:220px; object-fit:cover; display:block; cursor:zoom-in;"
+            onerror="this.parentNode.innerHTML='<div class=\'menu-ex-placeholder\'><div class=\'placeholder-icon\'>✨</div><div class=\'placeholder-text\'>スペシャルメニュー<br>画像準備中</div></div>'"
+            onclick="openLb(this.src)">
         </div>
         <div class="menu-ex-body">
           <div class="menu-ex-name">スペシャル弁当</div>
           <div class="menu-ex-desc">ご飯・メイン・副菜４品の豪華版。季節の食材を使った特別メニューです。</div>
         </div>
-        <div class="admin-upload-row" id="specialUploadRow" style="display:none;">
-          <label class="upload-btn" for="specialFile">📤 画像を変更</label>
-          <input type="file" id="specialFile" accept="image/*" style="display:none;">
-          <button class="delete-btn" id="specialDelete">削除</button>
-        </div>
       </div>
 
     </div>
-  </div>
-
-  <!-- 管理者ログインボタン -->
-  <div style="text-align:right; margin-bottom: 32px;">
-    <button id="adminToggle" style="background:none; border:1px solid var(--mist); color:var(--stone); font-size:12px; cursor:pointer; letter-spacing:.1em; padding:6px 14px;">🔑 管理者ログイン</button>
-  </div>
-
-  <!-- 管理者ログインモーダル -->
-  <div id="adminModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:500; align-items:center; justify-content:center;">
-    <div style="background:white; padding:40px; max-width:360px; width:90%; text-align:center;">
-      <div style="font-family:'Zen Old Mincho',serif; font-size:18px; margin-bottom:20px; letter-spacing:.1em;">管理者ログイン</div>
-      <input type="password" id="adminPass" placeholder="パスワード" style="width:100%; padding:10px 14px; border:1px solid var(--mist); font-size:14px; margin-bottom:12px; outline:none;">
-      <div id="adminErr" style="color:var(--rust); font-size:12px; margin-bottom:12px; display:none;">パスワードが違います</div>
-      <button id="adminLogin" style="background:var(--dark); color:white; border:none; padding:11px 32px; font-size:13px; letter-spacing:.2em; cursor:pointer; width:100%; margin-bottom:10px;">ログイン</button>
-      <button id="adminCancel" style="background:none; border:1px solid var(--mist); padding:10px 32px; font-size:12px; letter-spacing:.1em; cursor:pointer; width:100%;">キャンセル</button>
-    </div>
-  </div>
-
-  <!-- 管理モードバナー -->
-  <div id="adminBanner" style="display:none; position:fixed; top:70px; left:0; right:0; background:var(--rust); color:white; text-align:center; padding:8px; font-size:12px; letter-spacing:.15em; z-index:150;">
-    🔑 管理モード &nbsp;|&nbsp; <button id="adminLogout" style="background:none; border:1px solid rgba(255,255,255,.5); color:white; padding:3px 14px; font-size:11px; cursor:pointer; letter-spacing:.1em;">ログアウト</button>
   </div>
 
   <!-- こんな事業所に -->
@@ -405,116 +356,15 @@
   const sn = document.getElementById('spNav');
   if(hb) hb.addEventListener('click', () => { hb.classList.toggle('open'); sn.style.display = sn.style.display==='block'?'none':'block'; });
 
-  const ADMIN_PASS = 'hayashi2024';
-  let isAdmin = false;
-
-  function loadImages() {
-    // 献立2枚
-    [1,2].forEach(n => {
-      const data = localStorage.getItem('kyushoku_schedule' + n);
-      const img = document.getElementById('scheduleImg' + n);
-      const ph  = document.getElementById('schedulePlaceholder' + n);
-      if (data && img) { img.src = data; img.style.display = 'block'; if (ph) ph.style.display = 'none'; }
-    });
-    // メニュー1枚ずつ
-    ['original','special'].forEach(key => {
-      const data = localStorage.getItem('kyushoku_' + key);
-      const img = document.getElementById(key + 'Img');
-      const ph  = document.getElementById(key + 'Placeholder');
-      if (data && img) { img.src = data; img.style.display = 'block'; if (ph) ph.style.display = 'none'; }
-    });
-  }
-
-  function setAdminMode(on) {
-    isAdmin = on;
-    ['scheduleUploadRow','originalUploadRow','specialUploadRow'].forEach(id => {
-      document.getElementById(id).style.display = on ? 'flex' : 'none';
-    });
-    document.getElementById('adminBanner').style.display = on ? 'block' : 'none';
-  }
-
-  function bindUpload(fileId, storageKey, imgId, placeholderId) {
-    document.getElementById(fileId).addEventListener('change', function(e) {
-      const file = e.target.files[0]; if (!file) return;
-      const reader = new FileReader();
-      reader.onload = ev => {
-        localStorage.setItem('kyushoku_' + storageKey, ev.target.result);
-        const img = document.getElementById(imgId);
-        const ph  = document.getElementById(placeholderId);
-        img.src = ev.target.result; img.style.display = 'block';
-        if (ph) ph.style.display = 'none';
-      };
-      reader.readAsDataURL(file);
-    });
-    document.getElementById(storageKey + 'Delete').addEventListener('click', () => {
-      if (!confirm('削除しますか？')) return;
-      localStorage.removeItem('kyushoku_' + storageKey);
-      const img = document.getElementById(imgId);
-      const ph  = document.getElementById(placeholderId);
-      img.src = ''; img.style.display = 'none';
-      if (ph) ph.style.display = 'flex';
-    });
-  }
-
-  // 献立2枚
-  [1,2].forEach(n => {
-    document.getElementById('scheduleFile' + n).addEventListener('change', function(e) {
-      const file = e.target.files[0]; if (!file) return;
-      const reader = new FileReader();
-      reader.onload = ev => {
-        localStorage.setItem('kyushoku_schedule' + n, ev.target.result);
-        const img = document.getElementById('scheduleImg' + n);
-        const ph  = document.getElementById('schedulePlaceholder' + n);
-        img.src = ev.target.result; img.style.display = 'block';
-        if (ph) ph.style.display = 'none';
-      };
-      reader.readAsDataURL(file);
-    });
-    document.getElementById('scheduleDelete' + n).addEventListener('click', () => {
-      if (!confirm('削除しますか？')) return;
-      localStorage.removeItem('kyushoku_schedule' + n);
-      const img = document.getElementById('scheduleImg' + n);
-      const ph  = document.getElementById('schedulePlaceholder' + n);
-      img.src = ''; img.style.display = 'none';
-      if (ph) ph.style.display = 'flex';
-    });
-  });
-  bindUpload('originalFile', 'original', 'originalImg', 'originalPlaceholder');
-  bindUpload('specialFile',  'special',  'specialImg',  'specialPlaceholder');
-
-  document.getElementById('adminToggle').addEventListener('click', () => {
-    if (isAdmin) { setAdminMode(false); return; }
-    const m = document.getElementById('adminModal');
-    m.style.display = 'flex';
-    document.getElementById('adminPass').value = '';
-    document.getElementById('adminErr').style.display = 'none';
-    setTimeout(() => document.getElementById('adminPass').focus(), 100);
-  });
-  document.getElementById('adminLogin').addEventListener('click', () => {
-    if (document.getElementById('adminPass').value === ADMIN_PASS) {
-      document.getElementById('adminModal').style.display = 'none';
-      setAdminMode(true);
-    } else { document.getElementById('adminErr').style.display = 'block'; }
-  });
-  document.getElementById('adminPass').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('adminLogin').click(); });
-  document.getElementById('adminCancel').addEventListener('click', () => { document.getElementById('adminModal').style.display = 'none'; });
-  document.getElementById('adminLogout').addEventListener('click', () => setAdminMode(false));
-
   // ライトボックス
-  const lb    = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lbImg');
-  document.querySelectorAll('.menu-ex-img-wrap img').forEach(img => {
-    img.addEventListener('click', () => {
-      if (!img.src || img.style.display === 'none') return;
-      lbImg.src = img.src;
-      lb.classList.add('open');
-    });
-  });
+  function openLb(src) {
+    document.getElementById('lbImg').src = src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  const lb = document.getElementById('lightbox');
   document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('open'));
   lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
-
-  loadImages();
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); observer.unobserve(e.target); } });
