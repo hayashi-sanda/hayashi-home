@@ -112,7 +112,16 @@
     .menu-ex-badge.original { background: var(--rust); color: white; }
     .menu-ex-badge.special  { background: var(--gold); color: white; }
     .menu-ex-img-wrap { min-height: 220px; background: var(--cream); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .menu-ex-img-wrap img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .menu-ex-img-wrap img { width: 100%; height: 220px; object-fit: cover; display: block; cursor: zoom-in; transition: opacity .2s; }
+    .menu-ex-img-wrap img:hover { opacity: .85; }
+
+    /* ライトボックス */
+    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.88); z-index:1000; align-items:center; justify-content:center; cursor:zoom-out; }
+    .lightbox.open { display:flex; }
+    .lightbox img { width:90vw; max-width:960px; max-height:94vh; object-fit:contain; box-shadow:0 8px 48px rgba(0,0,0,.6); animation:lbIn .25s ease; }
+    .lightbox-close { position:absolute; top:20px; right:28px; color:white; font-size:36px; cursor:pointer; line-height:1; opacity:.8; transition:opacity .2s; }
+    .lightbox-close:hover { opacity:1; }
+    @keyframes lbIn { from { opacity:0; transform:scale(.92); } to { opacity:1; transform:scale(1); } }
     .menu-ex-placeholder { text-align: center; padding: 40px 24px; color: var(--stone); }
     .menu-ex-body { padding: 20px 20px 24px; }
     .menu-ex-name { font-family: 'Zen Old Mincho', serif; font-size: 17px; letter-spacing: .1em; margin-bottom: 8px; }
@@ -361,6 +370,13 @@
   <p class="footer-copy">© 株式会社はやし. All Rights Reserved.</p>
 </footer>
 <a href="#top" class="page-top" id="pageTop">▲</a>
+
+<!-- ライトボックス -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lbClose">✕</span>
+  <img id="lbImg" src="" alt="">
+</div>
+
 <script>
   const ADMIN_PASS = 'hayashi2024';
   let isAdmin = false;
@@ -456,6 +472,20 @@
   document.getElementById('adminPass').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('adminLogin').click(); });
   document.getElementById('adminCancel').addEventListener('click', () => { document.getElementById('adminModal').style.display = 'none'; });
   document.getElementById('adminLogout').addEventListener('click', () => setAdminMode(false));
+
+  // ライトボックス
+  const lb    = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  document.querySelectorAll('.menu-ex-img-wrap img').forEach(img => {
+    img.addEventListener('click', () => {
+      if (!img.src || img.style.display === 'none') return;
+      lbImg.src = img.src;
+      lb.classList.add('open');
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('open'));
+  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
 
   loadImages();
 
