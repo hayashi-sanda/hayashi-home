@@ -199,18 +199,29 @@
   <div class="menu-section reveal" id="kongetsu">
     <h2>今月の献立</h2>
     <div class="schedule-box">
-      <div class="schedule-img-wrap" id="scheduleWrap">
-        <div class="schedule-placeholder" id="schedulePlaceholder">
-          <div class="placeholder-icon">📅</div>
-          <div class="placeholder-text">献立表を準備中です</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--mist);">
+        <div class="schedule-img-wrap" id="scheduleWrap1">
+          <div class="schedule-placeholder" id="schedulePlaceholder1">
+            <div class="placeholder-icon">📅</div>
+            <div class="placeholder-text">献立表①<br>準備中</div>
+          </div>
+          <img id="scheduleImg1" src="" alt="今月の献立①" style="display:none; width:100%; height:auto;">
         </div>
-        <img id="scheduleImg" src="" alt="今月の献立" style="display:none; width:100%; height:auto; border-radius:2px;">
+        <div class="schedule-img-wrap" id="scheduleWrap2">
+          <div class="schedule-placeholder" id="schedulePlaceholder2">
+            <div class="placeholder-icon">📅</div>
+            <div class="placeholder-text">献立表②<br>準備中</div>
+          </div>
+          <img id="scheduleImg2" src="" alt="今月の献立②" style="display:none; width:100%; height:auto;">
+        </div>
       </div>
-      <!-- 管理者用アップロードボタン（管理モード時のみ表示） -->
       <div class="admin-upload-row" id="scheduleUploadRow" style="display:none;">
-        <label class="upload-btn" for="scheduleFile">📤 献立表を変更する</label>
-        <input type="file" id="scheduleFile" accept="image/*" style="display:none;">
-        <button class="delete-btn" id="scheduleDelete">削除</button>
+        <label class="upload-btn" for="scheduleFile1">📤 献立①</label>
+        <input type="file" id="scheduleFile1" accept="image/*" style="display:none;">
+        <button class="delete-btn" id="scheduleDelete1">削除①</button>
+        <label class="upload-btn" for="scheduleFile2">📤 献立②</label>
+        <input type="file" id="scheduleFile2" accept="image/*" style="display:none;">
+        <button class="delete-btn" id="scheduleDelete2">削除②</button>
       </div>
     </div>
   </div>
@@ -355,7 +366,15 @@
   let isAdmin = false;
 
   function loadImages() {
-    ['schedule','original','special'].forEach(key => {
+    // 献立2枚
+    [1,2].forEach(n => {
+      const data = localStorage.getItem('kyushoku_schedule' + n);
+      const img = document.getElementById('scheduleImg' + n);
+      const ph  = document.getElementById('schedulePlaceholder' + n);
+      if (data && img) { img.src = data; img.style.display = 'block'; if (ph) ph.style.display = 'none'; }
+    });
+    // メニュー1枚ずつ
+    ['original','special'].forEach(key => {
       const data = localStorage.getItem('kyushoku_' + key);
       const img = document.getElementById(key + 'Img');
       const ph  = document.getElementById(key + 'Placeholder');
@@ -394,7 +413,29 @@
     });
   }
 
-  bindUpload('scheduleFile', 'schedule', 'scheduleImg', 'schedulePlaceholder');
+  // 献立2枚
+  [1,2].forEach(n => {
+    document.getElementById('scheduleFile' + n).addEventListener('change', function(e) {
+      const file = e.target.files[0]; if (!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        localStorage.setItem('kyushoku_schedule' + n, ev.target.result);
+        const img = document.getElementById('scheduleImg' + n);
+        const ph  = document.getElementById('schedulePlaceholder' + n);
+        img.src = ev.target.result; img.style.display = 'block';
+        if (ph) ph.style.display = 'none';
+      };
+      reader.readAsDataURL(file);
+    });
+    document.getElementById('scheduleDelete' + n).addEventListener('click', () => {
+      if (!confirm('削除しますか？')) return;
+      localStorage.removeItem('kyushoku_schedule' + n);
+      const img = document.getElementById('scheduleImg' + n);
+      const ph  = document.getElementById('schedulePlaceholder' + n);
+      img.src = ''; img.style.display = 'none';
+      if (ph) ph.style.display = 'flex';
+    });
+  });
   bindUpload('originalFile', 'original', 'originalImg', 'originalPlaceholder');
   bindUpload('specialFile',  'special',  'specialImg',  'specialPlaceholder');
 
