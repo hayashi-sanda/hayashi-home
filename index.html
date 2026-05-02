@@ -408,7 +408,6 @@
 
       /* ハンバーガーメニュー */
       .hamburger { display:flex !important; }
-      .sp-nav { display:block !important; }
 
       /* ヒーロー */
       .hero { height:clamp(320px, 60vw, 480px); }
@@ -514,7 +513,11 @@
 
 <!-- ══ HEADER ══ -->
 <header>
-  <a href="#top" class="logo"><img src="rogo.jpg" alt="仕出しはやし" style="height:50px; display:block;"></a>
+  <a href="#top" class="logo">
+    <div class="logo-main"><span>仕</span>出し　はやし</div>
+    <div class="logo-rule"></div>
+    <div class="logo-sub">HAYASHI · SANDA · HYOGO</div>
+  </a>
   <nav>
     <a href="#greeting">ご挨拶</a>
     <a href="info.html">営業案内</a>
@@ -802,9 +805,11 @@
   // ハンバーガーメニュー
   const hamburger = document.getElementById('hamburger');
   const spNav     = document.getElementById('spNav');
+  spNav.style.display = 'none';
   hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    spNav.style.display = spNav.style.display === 'block' ? 'none' : 'block';
+    const isOpen = spNav.style.display === 'block';
+    spNav.style.display = isOpen ? 'none' : 'block';
+    hamburger.classList.toggle('open', !isOpen);
   });
   function closeMenu() {
     hamburger.classList.remove('open');
