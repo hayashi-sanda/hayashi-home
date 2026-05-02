@@ -75,8 +75,17 @@
 
     .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .menu-card { background: white; border: 1px solid var(--mist); overflow: hidden; display: flex; }
-    .menu-card-img { width: 140px; flex-shrink: 0; }
-    .menu-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .menu-card-img { width: 140px; flex-shrink: 0; cursor: zoom-in; }
+    .menu-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .2s; }
+    .menu-card-img img:hover { opacity: .85; }
+
+    /* ライトボックス */
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.88); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 88vh; object-fit: contain; box-shadow: 0 8px 48px rgba(0,0,0,.6); animation: lbIn .25s ease; }
+    .lightbox-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 36px; cursor: pointer; line-height: 1; opacity: .8; transition: opacity .2s; }
+    .lightbox-close:hover { opacity: 1; }
+    @keyframes lbIn { from { opacity:0; transform:scale(.92); } to { opacity:1; transform:scale(1); } }
     .menu-card-body { padding: 20px; flex: 1; }
     .menu-card-name { font-family: 'Zen Old Mincho', serif; font-size: 16px; letter-spacing: 0.1em; margin-bottom: 6px; }
     .menu-card-desc { font-size: 12px; line-height: 1.9; color: var(--stone); margin-bottom: 12px; }
@@ -269,7 +278,27 @@
 
 <a href="#top" class="page-top" id="pageTop">▲</a>
 
+<!-- ライトボックス -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lbClose">✕</span>
+  <img id="lbImg" src="" alt="">
+</div>
+
 <script>
+  // ライトボックス
+  const lb    = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  document.querySelectorAll('.menu-card-img img').forEach(img => {
+    img.addEventListener('click', () => {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add('open');
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('open'));
+  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); observer.unobserve(e.target); } });
   }, { threshold: 0.1 });
