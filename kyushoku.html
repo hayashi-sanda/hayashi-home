@@ -111,11 +111,14 @@
     .menu-ex-badge { font-size: 11px; letter-spacing: .25em; padding: 6px 16px; font-weight: 700; }
     .menu-ex-badge.original { background: var(--rust); color: white; }
     .menu-ex-badge.special  { background: var(--gold); color: white; }
-    .menu-ex-img-wrap { min-height: 220px; background: var(--cream); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .menu-ex-placeholder { text-align: center; padding: 40px 24px; color: var(--stone); }
+    .menu-ex-img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--mist); }
+    .menu-ex-img-wrap { min-height: 160px; background: var(--cream); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .menu-ex-img-wrap img { width: 100%; height: 160px; object-fit: cover; display: block; }
+    .menu-ex-placeholder { text-align: center; padding: 24px 12px; color: var(--stone); }
     .menu-ex-body { padding: 20px 20px 24px; }
     .menu-ex-name { font-family: 'Zen Old Mincho', serif; font-size: 17px; letter-spacing: .1em; margin-bottom: 8px; }
     .menu-ex-desc { font-size: 12.5px; line-height: 1.9; color: var(--stone); }
+    .admin-pair-row { display: flex; gap: 8px; padding: 10px 16px; border-top: 1px dashed var(--mist); background: #fffdf8; flex-wrap: wrap; }
 
     .admin-upload-row { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border-top: 1px dashed var(--mist); background: #fffdf8; }
     .upload-btn { display: inline-block; background: var(--dark); color: white; font-size: 12px; letter-spacing: .15em; padding: 8px 18px; cursor: pointer; transition: background .3s; }
@@ -221,42 +224,66 @@
       <!-- オリジナル -->
       <div class="menu-ex-card">
         <div class="menu-ex-badge original">オリジナル</div>
-        <div class="menu-ex-img-wrap" id="originalWrap">
-          <div class="menu-ex-placeholder" id="originalPlaceholder">
-            <div class="placeholder-icon">🍱</div>
-            <div class="placeholder-text">オリジナルメニュー<br>画像を準備中</div>
+        <div class="menu-ex-img-pair">
+          <div class="menu-ex-img-wrap" id="originalWrap1">
+            <div class="menu-ex-placeholder" id="originalPlaceholder1">
+              <div class="placeholder-icon">🍱</div>
+              <div class="placeholder-text" style="font-size:11px;">写真①</div>
+            </div>
+            <img id="originalImg1" src="" alt="オリジナル①" style="display:none;">
           </div>
-          <img id="originalImg" src="" alt="オリジナルメニュー" style="display:none; width:100%; height:auto;">
+          <div class="menu-ex-img-wrap" id="originalWrap2">
+            <div class="menu-ex-placeholder" id="originalPlaceholder2">
+              <div class="placeholder-icon">🍱</div>
+              <div class="placeholder-text" style="font-size:11px;">写真②</div>
+            </div>
+            <img id="originalImg2" src="" alt="オリジナル②" style="display:none;">
+          </div>
         </div>
         <div class="menu-ex-body">
-          <div class="menu-ex-name" id="originalName">オリジナル弁当</div>
-          <div class="menu-ex-desc" id="originalDesc">ご飯・メイン・副菜３品の基本セット。毎日飽きないよう週替わりで献立を変えています。</div>
+          <div class="menu-ex-name">オリジナル弁当</div>
+          <div class="menu-ex-desc">ご飯・メイン・副菜３品の基本セット。毎日飽きないよう週替わりで献立を変えています。</div>
         </div>
-        <div class="admin-upload-row" id="originalUploadRow" style="display:none;">
-          <label class="upload-btn" for="originalFile">📤 画像を変更</label>
-          <input type="file" id="originalFile" accept="image/*" style="display:none;">
-          <button class="delete-btn" id="originalDelete">削除</button>
+        <div class="admin-pair-row" id="originalUploadRow" style="display:none;">
+          <label class="upload-btn" for="originalFile1" style="font-size:11px;">📤 写真①</label>
+          <input type="file" id="originalFile1" accept="image/*" style="display:none;">
+          <button class="delete-btn" id="originalDelete1" style="font-size:11px;">削除①</button>
+          <label class="upload-btn" for="originalFile2" style="font-size:11px;">📤 写真②</label>
+          <input type="file" id="originalFile2" accept="image/*" style="display:none;">
+          <button class="delete-btn" id="originalDelete2" style="font-size:11px;">削除②</button>
         </div>
       </div>
 
       <!-- スペシャル -->
       <div class="menu-ex-card">
         <div class="menu-ex-badge special">スペシャル</div>
-        <div class="menu-ex-img-wrap" id="specialWrap">
-          <div class="menu-ex-placeholder" id="specialPlaceholder">
-            <div class="placeholder-icon">✨</div>
-            <div class="placeholder-text">スペシャルメニュー<br>画像を準備中</div>
+        <div class="menu-ex-img-pair">
+          <div class="menu-ex-img-wrap" id="specialWrap1">
+            <div class="menu-ex-placeholder" id="specialPlaceholder1">
+              <div class="placeholder-icon">✨</div>
+              <div class="placeholder-text" style="font-size:11px;">写真①</div>
+            </div>
+            <img id="specialImg1" src="" alt="スペシャル①" style="display:none;">
           </div>
-          <img id="specialImg" src="" alt="スペシャルメニュー" style="display:none; width:100%; height:auto;">
+          <div class="menu-ex-img-wrap" id="specialWrap2">
+            <div class="menu-ex-placeholder" id="specialPlaceholder2">
+              <div class="placeholder-icon">✨</div>
+              <div class="placeholder-text" style="font-size:11px;">写真②</div>
+            </div>
+            <img id="specialImg2" src="" alt="スペシャル②" style="display:none;">
+          </div>
         </div>
         <div class="menu-ex-body">
-          <div class="menu-ex-name" id="specialName">スペシャル弁当</div>
-          <div class="menu-ex-desc" id="specialDesc">ご飯・メイン・副菜４品の豪華版。季節の食材を使った特別メニューです。</div>
+          <div class="menu-ex-name">スペシャル弁当</div>
+          <div class="menu-ex-desc">ご飯・メイン・副菜４品の豪華版。季節の食材を使った特別メニューです。</div>
         </div>
-        <div class="admin-upload-row" id="specialUploadRow" style="display:none;">
-          <label class="upload-btn" for="specialFile">📤 画像を変更</label>
-          <input type="file" id="specialFile" accept="image/*" style="display:none;">
-          <button class="delete-btn" id="specialDelete">削除</button>
+        <div class="admin-pair-row" id="specialUploadRow" style="display:none;">
+          <label class="upload-btn" for="specialFile1" style="font-size:11px;">📤 写真①</label>
+          <input type="file" id="specialFile1" accept="image/*" style="display:none;">
+          <button class="delete-btn" id="specialDelete1" style="font-size:11px;">削除①</button>
+          <label class="upload-btn" for="specialFile2" style="font-size:11px;">📤 写真②</label>
+          <input type="file" id="specialFile2" accept="image/*" style="display:none;">
+          <button class="delete-btn" id="specialDelete2" style="font-size:11px;">削除②</button>
         </div>
       </div>
 
@@ -352,17 +379,18 @@
   const ADMIN_PASS = 'hayashi2024';
   let isAdmin = false;
 
-  // 保存済み画像を読み込む
   function loadImages() {
-    ['schedule','original','special'].forEach(key => {
-      const data = localStorage.getItem('kyushoku_' + key);
-      const img  = document.getElementById(key + 'Img');
-      const ph   = document.getElementById(key + 'Placeholder') || document.getElementById(key === 'schedule' ? 'schedulePlaceholder' : key + 'Placeholder');
-      if (data && img) {
-        img.src = data;
-        img.style.display = 'block';
-        if (ph) ph.style.display = 'none';
-      }
+    // 献立
+    const sd = localStorage.getItem('kyushoku_schedule');
+    if (sd) { document.getElementById('scheduleImg').src = sd; document.getElementById('scheduleImg').style.display = 'block'; document.getElementById('schedulePlaceholder').style.display = 'none'; }
+    // メニュー2枚ずつ
+    ['original','special'].forEach(key => {
+      [1,2].forEach(n => {
+        const data = localStorage.getItem('kyushoku_' + key + n);
+        const img = document.getElementById(key + 'Img' + n);
+        const ph  = document.getElementById(key + 'Placeholder' + n);
+        if (data && img) { img.src = data; img.style.display = 'block'; if (ph) ph.style.display = 'none'; }
+      });
     });
   }
 
@@ -374,7 +402,6 @@
     document.getElementById('adminBanner').style.display = on ? 'block' : 'none';
   }
 
-  // 画像アップロード処理
   function bindUpload(fileId, storageKey, imgId, placeholderId) {
     document.getElementById(fileId).addEventListener('change', function(e) {
       const file = e.target.files[0];
@@ -385,26 +412,57 @@
         localStorage.setItem('kyushoku_' + storageKey, data);
         const img = document.getElementById(imgId);
         const ph  = document.getElementById(placeholderId);
-        img.src = data;
-        img.style.display = 'block';
+        img.src = data; img.style.display = 'block';
         if (ph) ph.style.display = 'none';
       };
       reader.readAsDataURL(file);
     });
-    document.getElementById(storageKey + 'Delete').addEventListener('click', function() {
-      if (!confirm('画像を削除しますか？')) return;
-      localStorage.removeItem('kyushoku_' + storageKey);
-      const img = document.getElementById(imgId);
-      const ph  = document.getElementById(placeholderId);
-      img.src = '';
-      img.style.display = 'none';
-      if (ph) ph.style.display = 'flex';
-    });
+    const delBtn = document.getElementById(storageKey.replace('_','') + 'Delete' + storageKey.slice(-1));
+    // delete handled separately below
   }
 
-  bindUpload('scheduleFile', 'schedule', 'scheduleImg', 'schedulePlaceholder');
-  bindUpload('originalFile', 'original', 'originalImg', 'originalPlaceholder');
-  bindUpload('specialFile',  'special',  'specialImg',  'specialPlaceholder');
+  // 献立アップロード
+  document.getElementById('scheduleFile').addEventListener('change', function(e) {
+    const file = e.target.files[0]; if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      localStorage.setItem('kyushoku_schedule', ev.target.result);
+      document.getElementById('scheduleImg').src = ev.target.result;
+      document.getElementById('scheduleImg').style.display = 'block';
+      document.getElementById('schedulePlaceholder').style.display = 'none';
+    };
+    reader.readAsDataURL(file);
+  });
+  document.getElementById('scheduleDelete').addEventListener('click', () => {
+    if (!confirm('削除しますか？')) return;
+    localStorage.removeItem('kyushoku_schedule');
+    document.getElementById('scheduleImg').src = ''; document.getElementById('scheduleImg').style.display = 'none';
+    document.getElementById('schedulePlaceholder').style.display = 'flex';
+  });
+
+  // メニュー画像アップロード（2枚ずつ）
+  ['original','special'].forEach(key => {
+    [1,2].forEach(n => {
+      document.getElementById(key + 'File' + n).addEventListener('change', function(e) {
+        const file = e.target.files[0]; if (!file) return;
+        const reader = new FileReader();
+        reader.onload = ev => {
+          localStorage.setItem('kyushoku_' + key + n, ev.target.result);
+          document.getElementById(key + 'Img' + n).src = ev.target.result;
+          document.getElementById(key + 'Img' + n).style.display = 'block';
+          document.getElementById(key + 'Placeholder' + n).style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+      });
+      document.getElementById(key + 'Delete' + n).addEventListener('click', () => {
+        if (!confirm('削除しますか？')) return;
+        localStorage.removeItem('kyushoku_' + key + n);
+        document.getElementById(key + 'Img' + n).src = '';
+        document.getElementById(key + 'Img' + n).style.display = 'none';
+        document.getElementById(key + 'Placeholder' + n).style.display = 'flex';
+      });
+    });
+  });
 
   // 管理者ログイン
   document.getElementById('adminToggle').addEventListener('click', () => {
@@ -415,27 +473,16 @@
     document.getElementById('adminErr').style.display = 'none';
     setTimeout(() => document.getElementById('adminPass').focus(), 100);
   });
-
   document.getElementById('adminLogin').addEventListener('click', () => {
     if (document.getElementById('adminPass').value === ADMIN_PASS) {
       document.getElementById('adminModal').style.display = 'none';
       setAdminMode(true);
-    } else {
-      document.getElementById('adminErr').style.display = 'block';
-    }
+    } else { document.getElementById('adminErr').style.display = 'block'; }
   });
-
-  document.getElementById('adminPass').addEventListener('keydown', e => {
-    if (e.key === 'Enter') document.getElementById('adminLogin').click();
-  });
-
-  document.getElementById('adminCancel').addEventListener('click', () => {
-    document.getElementById('adminModal').style.display = 'none';
-  });
-
+  document.getElementById('adminPass').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('adminLogin').click(); });
+  document.getElementById('adminCancel').addEventListener('click', () => { document.getElementById('adminModal').style.display = 'none'; });
   document.getElementById('adminLogout').addEventListener('click', () => setAdminMode(false));
 
-  // 初期化
   loadImages();
 
   const observer = new IntersectionObserver(entries => {
