@@ -74,11 +74,17 @@
     .menu-section h2 { font-family: 'Zen Old Mincho', serif; font-size: 20px; letter-spacing: 0.12em; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--mist); position: relative; }
     .menu-section h2::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 2px; background: var(--gold); }
 
-    .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .menu-card { background: white; border: 1px solid var(--mist); overflow: hidden; display: flex; }
-    .menu-card-img { width: 140px; flex-shrink: 0; cursor: zoom-in; }
-    .menu-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .2s; }
-    .menu-card-img img:hover { opacity: .85; }
+    .menu-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .menu-card { background:white; border:1px solid var(--mist); overflow:hidden; transition:transform .35s, box-shadow .35s; }
+    .menu-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(28,20,16,.10); }
+    .menu-card-img { width:100%; aspect-ratio:4/3; overflow:hidden; cursor:zoom-in; }
+    .menu-card-img img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s, opacity .2s; }
+    .menu-card-img img:hover { transform:scale(1.05); opacity:.9; }
+    .menu-card-body { padding:14px 16px 18px; }
+    .menu-card-name { font-family:'Zen Old Mincho',serif; font-size:16px; letter-spacing:0.1em; margin-bottom:4px; }
+    .menu-card-desc { font-size:12px; line-height:1.8; color:var(--stone); margin-bottom:8px; }
+    .menu-card-price { font-family:'Shippori Mincho B1',serif; font-size:18px; font-weight:700; color:var(--rust); }
+    .menu-card-price span { font-size:12px; font-weight:400; color:var(--stone); }
 
     /* ライトボックス */
     .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.88); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out; }
@@ -224,49 +230,72 @@
 
   <!-- メニュー例 -->
   <div class="menu-section reveal">
-    <h2>メニュー例（税別）</h2>
+    <h2>会席料理 メニュー例（税別）</h2>
     <div class="menu-grid">
       <div class="menu-card">
         <div class="menu-card-img">
-          <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/6_1.jpg" alt="碗盛膳" loading="lazy">
+          <img src="kaiseki1.jpg" alt="会席料理" loading="lazy">
         </div>
         <div class="menu-card-body">
-          <div class="menu-card-name">碗盛膳</div>
-          <p class="menu-card-desc">旬の食材を使った椀物を中心とした品格ある会席膳。法要やご宴会に最適です。</p>
+          <div class="menu-card-name">会席料理</div>
+          <p class="menu-card-desc">一の膳 39cm×54cm　二の膳 30cm×30cm</p>
+          <div class="menu-card-price">9,600円<span>（税別）</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">
+          <img src="kaiseki2.jpg" alt="会席膳" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">会席膳</div>
+          <p class="menu-card-desc">39cm×54cm</p>
+          <div class="menu-card-price">7,200円<span>（税別）</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">
+          <img src="kaiseki3.jpg" alt="松花堂" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">松花堂</div>
+          <p class="menu-card-desc">26cm×26cm</p>
+          <div class="menu-card-price">3,000円<span>（税別）</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">
+          <img src="kaiseki4.jpg" alt="六角膳" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">六角膳</div>
+          <p class="menu-card-desc">直径42cm</p>
+          <div class="menu-card-price">4,200円<span>（税別）</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">
+          <img src="kaiseki5.jpg" alt="お食い初め膳" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">お食い初め膳</div>
+          <p class="menu-card-desc">お子様の大切な節目に</p>
+          <div class="menu-card-price">4,440円<span>（税別）</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">
+          <img src="kaiseki6.jpg" alt="椀盛膳" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">椀盛膳</div>
+          <p class="menu-card-desc">直径29cm</p>
           <div class="menu-card-price">3,600円<span>（税別）</span></div>
         </div>
       </div>
-      <div class="menu-card">
-        <div class="menu-card-img">
-          <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/1573177128_1.jpg" alt="花形弁当" loading="lazy">
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-name">花形弁当</div>
-          <p class="menu-card-desc">華やかな花形の器に盛り付けた特別感のある一品。お祝い事に喜ばれます。</p>
-          <div class="menu-card-price">3,600円<span>（税別）　33cm×33cm</span></div>
-        </div>
-      </div>
-      <div class="menu-card">
-        <div class="menu-card-img">
-          <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/3_1.jpg" alt="オードブル" loading="lazy">
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-name">パーティーオードブル</div>
-          <p class="menu-card-desc">彩り豊かな前菜盛り合わせ。パーティーや立食形式のご宴会に最適です。</p>
-          <div class="menu-card-price">15,000円<span>（税別）　直径50cm</span></div>
-        </div>
-      </div>
-      <div class="menu-card">
-        <div class="menu-card-img">
-          <img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/1_1.jpg" alt="寿司盛り合わせ" loading="lazy">
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-name">寿司盛り合わせ</div>
-          <p class="menu-card-desc">新鮮なネタを使った寿司盛り合わせ。4人前の大皿でご提供いたします。</p>
-          <div class="menu-card-price">8,000円<span>（税別）　4人前・直径40cm</span></div>
-        </div>
-      </div>
     </div>
+    <p style="font-size:12.5px; color:var(--stone); margin-top:20px; line-height:2;">
+      献立例：先物、小鉢、八寸、お造り、酢物、揚物、焼物、煮物、蒸物、鍋物、吸物、甘味、他
+    </p>
   </div>
 
   <div class="note-box reveal">
