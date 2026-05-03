@@ -58,11 +58,12 @@
     .menu-section h2 { font-family: 'Zen Old Mincho', serif; font-size: 20px; letter-spacing: 0.12em; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--mist); position: relative; }
     .menu-section h2::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 2px; background: var(--gold); }
 
-    .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .menu-card { background: white; border: 1px solid var(--mist); overflow: hidden; display: flex; }
-    .menu-card-img { width: 140px; flex-shrink: 0; cursor: zoom-in; }
-    .menu-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .2s; }
-    .menu-card-img img:hover { opacity: .85; }
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .menu-card { background: white; border: 1px solid var(--mist); overflow: hidden; transition:transform .35s, box-shadow .35s; }
+    .menu-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(28,20,16,.10); }
+    .menu-card-img { width:100%; aspect-ratio:4/3; overflow:hidden; cursor:zoom-in; }
+    .menu-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s, opacity .2s; }
+    .menu-card-img img:hover { transform:scale(1.05); opacity:.9; }
 
     /* ライトボックス */
     .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.88); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out; }
@@ -71,7 +72,7 @@
     .lightbox-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 36px; cursor: pointer; line-height: 1; opacity: .8; transition: opacity .2s; }
     .lightbox-close:hover { opacity: 1; }
     @keyframes lbIn { from { opacity:0; transform:scale(.92); } to { opacity:1; transform:scale(1); } }
-    .menu-card-body { padding: 20px; flex: 1; }
+    .menu-card-body { padding: 14px 16px 18px; }
     .menu-card-name { font-family: 'Zen Old Mincho', serif; font-size: 16px; letter-spacing: 0.1em; margin-bottom: 6px; }
     .menu-card-desc { font-size: 12px; line-height: 1.9; color: var(--stone); margin-bottom: 12px; }
     .menu-card-price { font-family: 'Shippori Mincho B1', serif; font-size: 18px; font-weight: 700; color: var(--rust); }
@@ -186,41 +187,60 @@
   </div>
 
   <div class="menu-section reveal">
-    <h2>メニュー例（税別）</h2>
+    <h2>幕の内弁当 メニュー例（税別）</h2>
     <div class="menu-grid">
       <div class="menu-card">
-        <div class="menu-card-img"><img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/15_1.jpg" alt="幕の内弁当 3600円" loading="lazy"></div>
+        <div class="menu-card-img"><img src="makunouti6.jpg" alt="会席弁当" loading="lazy"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">会席弁当</div>
+          <p class="menu-card-desc">44.6cm×34.6cm</p>
+          <div class="menu-card-price">4,800円<span>（税別）</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><img src="makunouti4.jpg" alt="幕の内弁当" loading="lazy"></div>
         <div class="menu-card-body">
           <div class="menu-card-name">幕の内弁当</div>
-          <p class="menu-card-desc">旬の食材をふんだんに使い、彩り豊かに仕上げた一折。ご宴会・パーティーに最適です。</p>
+          <p class="menu-card-desc">32cm×35cm</p>
           <div class="menu-card-price">3,600円<span>（税別）</span></div>
         </div>
       </div>
       <div class="menu-card">
-        <div class="menu-card-img"><img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/14_1.jpg" alt="幕の内弁当 2160円" loading="lazy"></div>
+        <div class="menu-card-img"><img src="makunouti3.jpg" alt="幕の内弁当" loading="lazy"></div>
         <div class="menu-card-body">
-          <div class="menu-card-name">幕の内弁当（カジュアル）</div>
-          <p class="menu-card-desc">日常の会議や軽食にも対応したリーズナブルな幕の内弁当。</p>
+          <div class="menu-card-name">幕の内弁当</div>
+          <p class="menu-card-desc">24cm×34cm</p>
           <div class="menu-card-price">2,160円<span>（税別）</span></div>
         </div>
       </div>
       <div class="menu-card">
-        <div class="menu-card-img"><img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/3_1.jpg" alt="オードブル" loading="lazy"></div>
+        <div class="menu-card-img"><img src="makunouti5.jpg" alt="幕の内弁当" loading="lazy"></div>
         <div class="menu-card-body">
-          <div class="menu-card-name">パーティーオードブル</div>
-          <p class="menu-card-desc">立食パーティーや宴会の前菜に。大皿でお届けします。</p>
-          <div class="menu-card-price">15,000円<span>（税別）　直径50cm</span></div>
+          <div class="menu-card-name">幕の内弁当</div>
+          <p class="menu-card-desc"></p>
+          <div class="menu-card-price">1,320円<span>（税別）</span></div>
         </div>
       </div>
       <div class="menu-card">
-        <div class="menu-card-img"><img src="https://www.hayashi-delivery.com/lib/resize_image.php?size=262&path=../upload/news2/1_1.jpg" alt="寿司盛り合わせ" loading="lazy"></div>
+        <div class="menu-card-img"><img src="makunouti1.jpg" alt="お子様弁当" loading="lazy"></div>
         <div class="menu-card-body">
-          <div class="menu-card-name">寿司盛り合わせ</div>
-          <p class="menu-card-desc">パーティーや宴会に喜ばれる寿司の大皿。4人前でご提供。</p>
-          <div class="menu-card-price">8,000円<span>（税別）　4人前・直径40cm</span></div>
+          <div class="menu-card-name">お子様弁当</div>
+          <p class="menu-card-desc">21cm×29cm</p>
+          <div class="menu-card-price">1,000円<span>（税別）</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><img src="makunouti2.jpg" alt="八角弁当" loading="lazy"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">八角弁当</div>
+          <p class="menu-card-desc">15cm×15cm</p>
+          <div class="menu-card-price">1,000円<span>（税別）</span></div>
         </div>
       </div>
     </div>
+    <p style="font-size:12.5px; color:var(--stone); margin-top:20px; line-height:2;">
+      結納・お食べ初め・棟上げ・お葬式・法事等、さまざまな場面に対応しています。
+    </p>
   </div>
 
   <div class="note-box reveal">
