@@ -562,7 +562,14 @@
 
 <!-- ══ HERO SLIDESHOW (自作) ══ -->
 <div class="hero" id="top-hero">
-  <div class="slide slide-1 active">
+  <div class="slide slide-3 active">
+    <div class="slide-content">
+      <div class="slide-badge">KYUSHOKU · DELIVERY</div>
+      <h1 class="slide-title">毎日の食事を<br>心を込めて</h1>
+      <p class="slide-sub">三田市・篠山市・神戸市北区の企業・工場へ配達</p>
+    </div>
+  </div>
+  <div class="slide slide-1">
     <div class="slide-content">
       <div class="slide-badge">KAISEKI · BANQUET</div>
       <h1 class="slide-title">春の宴に<br>彩りを添えて</h1>
@@ -574,13 +581,6 @@
       <div class="slide-badge">MAKUNOUCHI · OKAZARI</div>
       <h1 class="slide-title">行楽の一日を<br>丁寧なお弁当で</h1>
       <p class="slide-sub">幕の内弁当・オードブル・寿司盛り合わせ</p>
-    </div>
-  </div>
-  <div class="slide slide-3">
-    <div class="slide-content">
-      <div class="slide-badge">KYUSHOKU · DELIVERY</div>
-      <h1 class="slide-title">毎日の食事を<br>心を込めて</h1>
-      <p class="slide-sub">三田市・篠山市・神戸市北区へ配達</p>
     </div>
   </div>
 
@@ -595,16 +595,27 @@
   </div>
 </div>
 
+<!-- ══ 給食バナー ══ -->
+<section style="background:var(--dark); padding:40px 48px;">
+  <div style="max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+    <div>
+      <div style="font-size:10px; letter-spacing:.4em; color:var(--goldl); margin-bottom:10px;">KYUSHOKU BENTO</div>
+      <div style="font-family:'Zen Old Mincho',serif; font-size:clamp(20px,2.5vw,28px); color:white; letter-spacing:.1em; margin-bottom:10px;">給食弁当の定期配達</div>
+      <p style="font-size:13px; color:rgba(255,255,255,.65); line-height:2;">三田市・篠山市・神戸市北区の企業・工場・事業所へ<br>毎日の昼食を責任をもってお届けします。</p>
+    </div>
+    <a href="kyushoku.html" style="display:inline-block; background:var(--gold); color:white; text-decoration:none; font-size:13px; letter-spacing:.2em; padding:14px 40px; white-space:nowrap; transition:background .3s;" onmouseover="this.style.background='var(--rust)'" onmouseout="this.style.background='var(--gold)'">給食弁当を見る →</a>
+  </div>
+</section>
+
 <!-- ══ GREETING ══ -->
 <section class="greeting" id="greeting">
   <div class="section-header reveal">
     <span class="section-en">GREETING</span>
-    <h1 class="section-jp">三田市の仕出し弁当・給食弁当・会席料理なら仕出しはやし</h1>
+    <h1 class="section-jp">三田市の給食弁当・仕出し弁当・会席料理なら仕出しはやし</h1>
     <div class="section-rule"><span>✦</span></div>
   </div>
   <div class="greeting-inner reveal">
-    <p>兵庫県三田市東本庄にある<strong>仕出し「はやし」</strong>は、<strong>三田市・篠山市・神戸市北区</strong>を中心に<br>
-    会席料理、幕の内弁当、給食弁当を配達しております。</p>
+    <p>兵庫県三田市東本庄にある<strong>仕出し「はやし」</strong>は、<strong>三田市・篠山市・神戸市北区</strong>の企業・工場への<strong>給食弁当配達</strong>を中心に、会席料理・幕の内弁当も承っております。</p>
     <p>行楽弁当やパーティーのオードブルもご用意しております。<br>
     ご予算に応じてお作りすることができますので、お気軽にご相談ください。</p>
   </div>
@@ -678,44 +689,48 @@
   </div>
   <div class="cat-grid">
 
-    <a href="kaiseki.html" class="cat-card reveal">
-      <div class="cat-visual cat-visual-kaiseki">
-        <div class="cat-kanji">会</div>
-        <div class="cat-gold-line"></div>
-        <div class="cat-tag">KAISEKI</div>
-      </div>
-      <div class="cat-body">
-        <div class="cat-title-jp">会席料理</div>
-        <p class="cat-desc">冠婚葬祭・法要・ご宴会など、ハレの席に相応しい会席料理をご用意いたします。旬の食材を活かした一品をお届けします。</p>
-        <span class="cat-more">詳しく見る →</span>
-      </div>
-    </a>
-
-    <a href="makunouchi.html" class="cat-card reveal">
-      <div class="cat-visual cat-visual-maku">
-        <div class="cat-kanji">弁</div>
-        <div class="cat-gold-line"></div>
-        <div class="cat-tag">MAKUNOUCHI</div>
-      </div>
-      <div class="cat-body">
-        <div class="cat-title-jp">幕の内弁当</div>
-        <p class="cat-desc">行楽・会議・パーティーに最適な幕の内弁当。オードブルや寿司盛り合わせも承っております。ご予算に応じてご相談ください。</p>
-        <span class="cat-more">詳しく見る →</span>
-      </div>
-    </a>
-
-    <a href="kyushoku.html" class="cat-card reveal">
-      <div class="cat-visual cat-visual-kyushoku">
-        <div class="cat-kanji">給</div>
+  <!-- 給食弁当（大） -->
+  <a href="kyushoku.html" class="cat-card reveal" style="grid-column:1/-1;">
+    <div style="display:flex; flex-wrap:wrap;">
+      <div class="cat-visual cat-visual-kyushoku" style="flex:1; min-width:260px; height:220px;">
+        <div class="cat-kanji" style="font-size:120px;">給</div>
         <div class="cat-gold-line"></div>
         <div class="cat-tag">KYUSHOKU</div>
       </div>
-      <div class="cat-body">
-        <div class="cat-title-jp">給食弁当</div>
-        <p class="cat-desc">三田市・篠山市・神戸市北区の企業・工場・事業所への給食弁当配達を承っております。毎日の昼食を責任をもってお届けします。栄養バランスにも配慮した献立です。</p>
+      <div class="cat-body" style="flex:2; min-width:260px; padding:32px 36px;">
+        <div class="cat-title-jp" style="font-size:24px; margin-bottom:12px;">給食弁当</div>
+        <p class="cat-desc" style="font-size:14px; line-height:2; margin-bottom:20px;">三田市・篠山市・神戸市北区の企業・工場・事業所への給食弁当定期配達を承っております。毎日の昼食を責任をもってお届けします。栄養バランスにも配慮した献立で、安心してお任せください。</p>
         <span class="cat-more">詳しく見る →</span>
       </div>
-    </a>
+    </div>
+  </a>
+
+  <!-- 会席料理・幕の内（小） -->
+  <a href="kaiseki.html" class="cat-card reveal">
+    <div class="cat-visual cat-visual-kaiseki">
+      <div class="cat-kanji">会</div>
+      <div class="cat-gold-line"></div>
+      <div class="cat-tag">KAISEKI</div>
+    </div>
+    <div class="cat-body">
+      <div class="cat-title-jp">会席料理</div>
+      <p class="cat-desc">冠婚葬祭・法要・ご宴会など、ハレの席に相応しい会席料理をご用意いたします。</p>
+      <span class="cat-more">詳しく見る →</span>
+    </div>
+  </a>
+
+  <a href="makunouchi.html" class="cat-card reveal">
+    <div class="cat-visual cat-visual-maku">
+      <div class="cat-kanji">弁</div>
+      <div class="cat-gold-line"></div>
+      <div class="cat-tag">MAKUNOUCHI</div>
+    </div>
+    <div class="cat-body">
+      <div class="cat-title-jp">幕の内弁当</div>
+      <p class="cat-desc">行楽・会議・パーティーに最適な幕の内弁当。オードブルや寿司盛り合わせも承ります。</p>
+      <span class="cat-more">詳しく見る →</span>
+    </div>
+  </a>
 
   </div>
 </section>
