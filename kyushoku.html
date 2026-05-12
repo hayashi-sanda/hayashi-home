@@ -231,9 +231,14 @@
 
   <!-- ══ 今月の献立 ══ -->
   <div class="menu-section reveal" id="kongetsu">
-    <h2>今月の献立</h2>
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; padding-bottom:12px; border-bottom:1px solid var(--mist); position:relative;">
+      <h2 style="margin-bottom:0; padding-bottom:0; border-bottom:none;">今月の献立</h2>
+      <button onclick="printKondate()" style="background:var(--dark); color:white; border:none; padding:10px 24px; font-family:'Noto Serif JP',serif; font-size:13px; letter-spacing:.2em; cursor:pointer; display:flex; align-items:center; gap:8px; transition:background .3s;" onmouseover="this.style.background='var(--rust)'" onmouseout="this.style.background='var(--dark)'">
+        🖨️ 印刷する
+      </button>
+    </div>
     <div class="schedule-box">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--mist);">
+      <div id="kondateGrid" style="display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--mist);">
         <div class="schedule-img-wrap">
           <img src="kondate1.jpg" alt="献立①" style="width:100%; height:auto; display:block; cursor:zoom-in;"
             onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>準備中</div></div>'"
@@ -369,6 +374,27 @@
   const hb = document.getElementById('hamburger');
   const sn = document.getElementById('spNav');
   if(hb) hb.addEventListener('click', () => { hb.classList.toggle('open'); sn.style.display = sn.style.display==='block'?'none':'block'; });
+
+  // 印刷
+  function printKondate() {
+    const imgs = document.querySelectorAll('#kondateGrid img');
+    let html = '<html><head><title>今月の献立</title><style>';
+    html += 'body{margin:0;padding:10px;} ';
+    html += '.grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;} ';
+    html += 'img{width:100%;height:auto;display:block;} ';
+    html += '@media print{body{margin:0;padding:0;}}';
+    html += '</style></head><body><div class="grid">';
+    imgs.forEach(img => {
+      if (img.src && !img.src.endsWith('/')) {
+        html += `<img src="${img.src}">`;
+      }
+    });
+    html += '</div></body></html>';
+    const w = window.open('', '_blank');
+    w.document.write(html);
+    w.document.close();
+    w.onload = () => { w.print(); };
+  }
 
   // ライトボックス
   function openLb(src) {
