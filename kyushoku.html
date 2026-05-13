@@ -379,17 +379,19 @@
   function printKondate() {
     const imgs = document.querySelectorAll('#kondateGrid img');
     let html = '<html><head><title>今月の献立</title><style>';
-    html += 'body{margin:0;padding:10px;} ';
-    html += '.grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;} ';
-    html += 'img{width:100%;height:auto;display:block;} ';
-    html += '@media print{body{margin:0;padding:0;}}';
-    html += '</style></head><body><div class="grid">';
+    html += '* { margin:0; padding:0; box-sizing:border-box; }';
+    html += 'body { background:white; }';
+    html += '.page { width:210mm; height:297mm; display:flex; align-items:center; justify-content:center; page-break-after:always; }';
+    html += '.page:last-child { page-break-after:avoid; }';
+    html += 'img { max-width:200mm; max-height:287mm; object-fit:contain; }';
+    html += '@page { size:A4; margin:0; }';
+    html += '</style></head><body>';
     imgs.forEach(img => {
-      if (img.src && !img.src.endsWith('/')) {
-        html += `<img src="${img.src}">`;
+      if (img.src && !img.src.endsWith('/') && img.naturalWidth > 0) {
+        html += `<div class="page"><img src="${img.src}"></div>`;
       }
     });
-    html += '</div></body></html>';
+    html += '</body></html>';
     const w = window.open('', '_blank');
     w.document.write(html);
     w.document.close();
