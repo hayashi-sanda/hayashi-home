@@ -462,15 +462,33 @@ function renderImg(key){
 function uploadImg(key,input){
   const file=input.files[0];
   if(!file)return;
-  if(file.size>3*1024*1024){alert('画像サイズは3MB以下にしてください');return}
   const reader=new FileReader();
   reader.onload=e=>{
-    try{
-      localStorage.setItem(IMG_PREFIX+key,e.target.result);
-      renderImg(key);
-    }catch(err){
-      alert('保存容量が不足しています。他の画像を削除してから再試行してください。');
-    }
+    const img=new Image();
+    img.onload=()=>{
+      // 最大幅1200pxに縮小、品質0.75でJPEG圧縮
+      const MAX=1200;
+      let w=img.width, h=img.height;
+      if(w>MAX){h=Math.round(h*MAX/w);w=MAX;}
+      const canvas=document.createElement('canvas');
+      canvas.width=w; canvas.height=h;
+      canvas.getContext('2d').drawImage(img,0,0,w,h);
+      const compressed=canvas.toDataURL('image/jpeg',0.75);
+      try{
+        localStorage.setItem(IMG_PREFIX+key,compressed);
+        renderImg(key);
+      }catch(err){
+        // それでも入らない場合はさらに圧縮
+        const compressed2=canvas.toDataURL('image/jpeg',0.5);
+        try{
+          localStorage.setItem(IMG_PREFIX+key,compressed2);
+          renderImg(key);
+        }catch(err2){
+          alert('容量不足のため保存できませんでした。\n他の画像を削除してから再試行してください。');
+        }
+      }
+    };
+    img.src=e.target.result;
   };
   reader.readAsDataURL(file);
   input.value='';
