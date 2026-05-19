@@ -103,12 +103,12 @@
 
     /* 献立エリア */
     .schedule-box{background:white;border:1px solid var(--mist);overflow:hidden}
-    .kondate-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--mist)}
-    .kondate-cell{background:var(--warm);position:relative;min-height:200px;display:flex;flex-direction:column}
-    .kondate-cell-img{flex:1;display:flex;align-items:center;justify-content:center;background:var(--cream);overflow:hidden}
-    .kondate-cell-img img{width:100%;height:200px;object-fit:cover;display:block;cursor:zoom-in;transition:opacity .2s}
+    .kondate-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--mist)}
+    .kondate-cell{background:white;position:relative;display:flex;flex-direction:column}
+    .kondate-cell-img{display:flex;align-items:flex-start;justify-content:center;background:white;overflow:hidden}
+    .kondate-cell-img img{width:100%;height:auto;display:block;cursor:zoom-in;transition:opacity .2s}
     .kondate-cell-img img:hover{opacity:.85}
-    .kondate-placeholder{text-align:center;padding:40px 24px;color:var(--stone);width:100%}
+    .kondate-placeholder{text-align:center;padding:60px 24px;color:var(--stone);width:100%;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center}
     .kondate-placeholder .pi{font-size:36px;margin-bottom:8px}
     .kondate-placeholder .pt{font-size:12px;letter-spacing:.1em}
 
