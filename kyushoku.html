@@ -4,163 +4,191 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>給食弁当｜三田市の仕出しはやし</title>
-    <link rel="icon" type="image/jpeg" href="rogo.jpg">
-    <meta name="google-site-verification" content="4SgqhQqnFI5Kdxklf4Wa5LJzLiWG63t6-g6DlD1BPEA" />
+  <link rel="icon" type="image/jpeg" href="rogo.jpg">
+  <meta name="google-site-verification" content="4SgqhQqnFI5Kdxklf4Wa5LJzLiWG63t6-g6DlD1BPEA" />
   <meta name="description" content="仕出しはやしの給食弁当。三田市・丹波篠山市・神戸市北区の企業・工場・事業所への毎日の給食配達を承っております。栄養バランスに配慮した献立。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --ink: #1a1208; --cream: #f6f1e9; --warm: #fbf8f2; --gold: #b08828; --goldl: #cfa840; --rust: #7e3020; --stone: #6a5c4e; --mist: #e4dcd0; --dark: #18110a; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--warm); color: var(--ink); font-family: 'Noto Serif JP', serif; line-height: 1.9; }
-    header { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 44px; height: 70px; background: rgba(251,248,242,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--mist); box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
-    .logo { text-decoration: none; display: flex; flex-direction: column; gap: 1px; }
-    .logo-main { font-family: 'Zen Old Mincho', serif; font-size: 21px; font-weight: 700; letter-spacing: 0.25em; color: var(--rust); line-height: 1; }
-    .logo-main span { color: var(--gold); }
-    .logo-rule { width: 100%; height: 1px; background: linear-gradient(to right, var(--gold), transparent); margin: 2px 0; }
-    .logo-sub { font-size: 9.5px; letter-spacing: 0.35em; color: var(--stone); }
-    nav { display: flex; align-items: center; gap: 28px; }
-    nav a { text-decoration: none; font-size: 12.5px; letter-spacing: 0.15em; color: var(--stone); transition: color .3s; }
-    nav a:hover { color: var(--ink); }
-    nav a.active { color: var(--rust); border-bottom: 1px solid var(--rust); }
-    .nav-tel { font-family: 'Shippori Mincho B1', serif; font-size: 16px; font-weight: 700; color: var(--rust); border-left: 1px solid var(--mist); padding-left: 20px; }
-    .nav-sns { display: flex; gap: 10px; border-left: 1px solid var(--mist); padding-left: 20px; }
-    .sns-btn { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; text-decoration: none; transition: transform .25s; }
-    .sns-btn:hover { transform: scale(1.12); opacity: .85; }
-    .sns-btn.instagram { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
-    .sns-btn.line { background: #06c755; }
-    .sns-btn svg { width: 16px; height: 16px; fill: white; display: block; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--ink:#1a1208;--cream:#f6f1e9;--warm:#fbf8f2;--gold:#b08828;--goldl:#cfa840;--rust:#7e3020;--stone:#6a5c4e;--mist:#e4dcd0;--dark:#18110a}
+    html{scroll-behavior:smooth}
+    body{background:var(--warm);color:var(--ink);font-family:'Noto Serif JP',serif;line-height:1.9}
+    header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 44px;height:70px;background:rgba(251,248,242,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--mist);box-shadow:0 2px 16px rgba(0,0,0,.05)}
+    .logo{text-decoration:none;display:flex;flex-direction:column;gap:1px}
+    .logo-main{font-family:'Zen Old Mincho',serif;font-size:21px;font-weight:700;letter-spacing:.25em;color:var(--rust);line-height:1}
+    .logo-main span{color:var(--gold)}
+    .logo-rule{width:100%;height:1px;background:linear-gradient(to right,var(--gold),transparent);margin:2px 0}
+    .logo-sub{font-size:9.5px;letter-spacing:.35em;color:var(--stone)}
+    nav{display:flex;align-items:center;gap:28px}
+    nav a{text-decoration:none;font-size:12.5px;letter-spacing:.15em;color:var(--stone);transition:color .3s}
+    nav a:hover{color:var(--ink)}
+    nav a.active{color:var(--rust);border-bottom:1px solid var(--rust)}
+    .nav-tel{font-family:'Shippori Mincho B1',serif;font-size:16px;font-weight:700;color:var(--rust);border-left:1px solid var(--mist);padding-left:20px}
+    .nav-sns{display:flex;gap:10px;border-left:1px solid var(--mist);padding-left:20px}
+    .sns-btn{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;text-decoration:none;transition:transform .25s}
+    .sns-btn:hover{transform:scale(1.12);opacity:.85}
+    .sns-btn.instagram{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+    .sns-btn.line{background:#06c755}
+    .sns-btn svg{width:16px;height:16px;fill:white;display:block}
 
-    .page-hero { margin-top: 70px; height: 320px; background: linear-gradient(135deg, #0a0e1a 0%, #182038 50%, #1e2c4e 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-    .page-hero::before { content: '給'; position: absolute; right: -20px; top: -30px; font-family: 'Zen Old Mincho', serif; font-size: 280px; font-weight: 700; color: rgba(176,136,40,0.08); line-height: 1; pointer-events: none; }
-    .page-hero::after { content: ''; position: absolute; top: 30px; left: 60px; right: 60px; bottom: 30px; border: 1px solid rgba(176,136,40,0.2); pointer-events: none; }
-    .page-hero-inner { position: relative; z-index: 2; text-align: center; color: white; }
-    .page-hero-en { font-size: 10px; letter-spacing: 0.45em; color: var(--goldl); border: 1px solid rgba(176,136,40,.5); padding: 4px 18px; margin-bottom: 20px; display: inline-block; }
-    .page-hero-title { font-family: 'Zen Old Mincho', serif; font-size: clamp(28px,4vw,48px); font-weight: 400; letter-spacing: 0.15em; }
+    .page-hero{margin-top:70px;height:320px;background:linear-gradient(135deg,#0a0e1a 0%,#182038 50%,#1e2c4e 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .page-hero::before{content:'給';position:absolute;right:-20px;top:-30px;font-family:'Zen Old Mincho',serif;font-size:280px;font-weight:700;color:rgba(176,136,40,.08);line-height:1;pointer-events:none}
+    .page-hero::after{content:'';position:absolute;top:30px;left:60px;right:60px;bottom:30px;border:1px solid rgba(176,136,40,.2);pointer-events:none}
+    .page-hero-inner{position:relative;z-index:2;text-align:center;color:white}
+    .page-hero-en{font-size:10px;letter-spacing:.45em;color:var(--goldl);border:1px solid rgba(176,136,40,.5);padding:4px 18px;margin-bottom:20px;display:inline-block}
+    .page-hero-title{font-family:'Zen Old Mincho',serif;font-size:clamp(28px,4vw,48px);font-weight:400;letter-spacing:.15em}
 
-    .breadcrumb { padding: 16px 48px; font-size: 12px; color: var(--stone); letter-spacing: 0.1em; }
-    .breadcrumb a { color: var(--stone); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--gold); }
-    .breadcrumb span { margin: 0 8px; }
+    .breadcrumb{padding:16px 48px;font-size:12px;color:var(--stone);letter-spacing:.1em}
+    .breadcrumb a{color:var(--stone);text-decoration:none}
+    .breadcrumb a:hover{color:var(--gold)}
+    .breadcrumb span{margin:0 8px}
 
-    .content { max-width: 960px; margin: 0 auto; padding: 64px 48px; }
-    .section-lead { text-align: center; margin-bottom: 56px; }
-    .section-en { display: block; font-size: 10px; letter-spacing: .4em; color: var(--gold); text-transform: uppercase; margin-bottom: 10px; }
-    .section-jp { font-family: 'Zen Old Mincho', serif; font-size: clamp(18px,2.5vw,26px); letter-spacing: .12em; }
-    .section-rule { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 14px; }
-    .section-rule::before, .section-rule::after { content: ''; width: 50px; height: 1px; background: var(--gold); }
-    .section-rule span { color: var(--gold); }
-    .lead-text { text-align: center; font-size: 14.5px; line-height: 2.3; color: var(--stone); max-width: 680px; margin: 0 auto 64px; }
-    .lead-text strong { color: var(--ink); font-weight: 500; }
+    .content{max-width:960px;margin:0 auto;padding:64px 48px}
+    .section-lead{text-align:center;margin-bottom:56px}
+    .section-en{display:block;font-size:10px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+    .section-jp{font-family:'Zen Old Mincho',serif;font-size:clamp(18px,2.5vw,26px);letter-spacing:.12em}
+    .section-rule{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px}
+    .section-rule::before,.section-rule::after{content:'';width:50px;height:1px;background:var(--gold)}
+    .section-rule span{color:var(--gold)}
+    .lead-text{text-align:center;font-size:14.5px;line-height:2.3;color:var(--stone);max-width:680px;margin:0 auto 64px}
+    .lead-text strong{color:var(--ink);font-weight:500}
 
-    .menu-section { margin-bottom: 64px; }
-    .menu-section h2 { font-family: 'Zen Old Mincho', serif; font-size: 20px; letter-spacing: 0.12em; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--mist); position: relative; }
-    .menu-section h2::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 2px; background: var(--gold); }
+    .menu-section{margin-bottom:64px}
+    .menu-section h2{font-family:'Zen Old Mincho',serif;font-size:20px;letter-spacing:.12em;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--mist);position:relative}
+    .menu-section h2::after{content:'';position:absolute;bottom:-1px;left:0;width:60px;height:2px;background:var(--gold)}
 
-    /* FEATURES */
-    .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-bottom: 64px; }
-    .feature-item { background: white; border: 1px solid var(--mist); padding: 28px 24px; text-align: center; }
-    .feature-icon { font-size: 32px; margin-bottom: 14px; }
-    .feature-name { font-family: 'Zen Old Mincho', serif; font-size: 16px; letter-spacing: 0.1em; margin-bottom: 8px; }
-    .feature-desc { font-size: 12.5px; color: var(--stone); line-height: 1.9; }
+    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:64px}
+    .feature-item{background:white;border:1px solid var(--mist);padding:28px 24px;text-align:center}
+    .feature-icon{font-size:32px;margin-bottom:14px}
+    .feature-name{font-family:'Zen Old Mincho',serif;font-size:16px;letter-spacing:.1em;margin-bottom:8px}
+    .feature-desc{font-size:12.5px;color:var(--stone);line-height:1.9}
 
-    .uses-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 64px; }
-    .use-item { background: var(--cream); border: 1px solid var(--mist); padding: 24px 20px; text-align: center; }
-    .use-icon { font-size: 28px; margin-bottom: 10px; }
-    .use-name { font-family: 'Zen Old Mincho', serif; font-size: 15px; letter-spacing: 0.1em; }
+    .uses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:64px}
+    .use-item{background:var(--cream);border:1px solid var(--mist);padding:24px 20px;text-align:center}
+    .use-icon{font-size:28px;margin-bottom:10px}
+    .use-name{font-family:'Zen Old Mincho',serif;font-size:15px;letter-spacing:.1em}
 
-    .flow-list { list-style: none; margin-bottom: 64px; }
-    .flow-item { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--mist); align-items: flex-start; }
-    .flow-num { font-family: 'Shippori Mincho B1', serif; font-size: 32px; font-weight: 700; color: var(--gold); line-height: 1; flex-shrink: 0; width: 44px; text-align: center; }
-    .flow-body {}
-    .flow-title { font-family: 'Zen Old Mincho', serif; font-size: 17px; letter-spacing: 0.1em; margin-bottom: 6px; }
-    .flow-desc { font-size: 13px; color: var(--stone); line-height: 1.9; }
+    .flow-list{list-style:none;margin-bottom:64px}
+    .flow-item{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid var(--mist);align-items:flex-start}
+    .flow-num{font-family:'Shippori Mincho B1',serif;font-size:32px;font-weight:700;color:var(--gold);line-height:1;flex-shrink:0;width:44px;text-align:center}
+    .flow-title{font-family:'Zen Old Mincho',serif;font-size:17px;letter-spacing:.1em;margin-bottom:6px}
+    .flow-desc{font-size:13px;color:var(--stone);line-height:1.9}
 
-    .note-box { background: var(--cream); border-left: 3px solid var(--gold); padding: 20px 24px; font-size: 13px; line-height: 2; color: var(--stone); margin-bottom: 64px; }
+    .note-box{background:var(--cream);border-left:3px solid var(--gold);padding:20px 24px;font-size:13px;line-height:2;color:var(--stone);margin-bottom:64px}
 
-    .cta-box { background: var(--dark); padding: 48px; text-align: center; }
-    .cta-box p { color: rgba(255,255,255,0.7); font-size: 13.5px; line-height: 2; margin-bottom: 24px; }
-    .cta-tel { font-family: 'Shippori Mincho B1', serif; font-size: 38px; font-weight: 700; color: var(--goldl); letter-spacing: 0.05em; display: block; margin-bottom: 4px; }
-    .cta-free { font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 0.2em; margin-bottom: 24px; }
-    .cta-btn { display: inline-block; border: 1px solid var(--gold); color: var(--goldl); text-decoration: none; font-size: 12px; letter-spacing: 0.25em; padding: 12px 40px; transition: background .3s, color .3s; }
-    .cta-btn:hover { background: var(--gold); color: white; }
+    .cta-box{background:var(--dark);padding:48px;text-align:center}
+    .cta-box p{color:rgba(255,255,255,.7);font-size:13.5px;line-height:2;margin-bottom:24px}
+    .cta-tel{font-family:'Shippori Mincho B1',serif;font-size:38px;font-weight:700;color:var(--goldl);letter-spacing:.05em;display:block;margin-bottom:4px}
+    .cta-free{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.2em;margin-bottom:24px}
+    .cta-btn{display:inline-block;border:1px solid var(--gold);color:var(--goldl);text-decoration:none;font-size:12px;letter-spacing:.25em;padding:12px 40px;transition:background .3s,color .3s}
+    .cta-btn:hover{background:var(--gold);color:white}
 
-    footer { background: var(--dark); padding: 48px; color: rgba(255,255,255,0.5); text-align: center; }
-    .footer-logo-main { font-family: 'Zen Old Mincho', serif; font-size: 20px; letter-spacing: 0.25em; color: var(--goldl); margin-bottom: 12px; }
-    .footer-addr { font-size: 12px; line-height: 2.2; margin-bottom: 20px; }
-    .footer-nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
-    .footer-nav a { text-decoration: none; font-size: 12px; letter-spacing: 0.15em; color: rgba(255,255,255,0.5); transition: color .3s; }
-    .footer-nav a:hover { color: var(--goldl); }
-    .footer-copy { font-size: 11px; letter-spacing: 0.15em; }
+    footer{background:var(--dark);padding:48px;color:rgba(255,255,255,.5);text-align:center}
+    .footer-logo-main{font-family:'Zen Old Mincho',serif;font-size:20px;letter-spacing:.25em;color:var(--goldl);margin-bottom:12px}
+    .footer-addr{font-size:12px;line-height:2.2;margin-bottom:20px}
+    .footer-nav{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px}
+    .footer-nav a{text-decoration:none;font-size:12px;letter-spacing:.15em;color:rgba(255,255,255,.5);transition:color .3s}
+    .footer-nav a:hover{color:var(--goldl)}
+    .footer-copy{font-size:11px;letter-spacing:.15em}
+    .admin-footer-link{font-size:10px;color:rgba(255,255,255,.12);cursor:pointer;user-select:none;margin-left:8px;transition:color .3s}
+    .admin-footer-link:hover{color:rgba(255,255,255,.35)}
 
-    .page-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: var(--gold); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; font-size: 18px; opacity: 0; transform: translateY(12px); transition: opacity .3s, transform .3s, background .3s; z-index: 300; }
-    .page-top.visible { opacity: 1; transform: translateY(0); }
-    .page-top:hover { background: var(--rust); }
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.shown { opacity: 1; transform: translateY(0); }
+    .page-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:var(--gold);color:white;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:18px;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s,background .3s;z-index:300}
+    .page-top.visible{opacity:1;transform:translateY(0)}
+    .page-top:hover{background:var(--rust)}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.shown{opacity:1;transform:translateY(0)}
 
-    /* 献立・メニュー例 */
-    .schedule-box { background: white; border: 1px solid var(--mist); overflow: hidden; }
-    .schedule-img-wrap { min-height: 200px; background: var(--cream); display: flex; align-items: center; justify-content: center; }
-    .schedule-placeholder { text-align: center; padding: 48px 24px; color: var(--stone); }
-    .placeholder-icon { font-size: 40px; margin-bottom: 12px; }
-    .placeholder-text { font-size: 13px; letter-spacing: .1em; line-height: 1.9; }
+    /* 献立エリア */
+    .schedule-box{background:white;border:1px solid var(--mist);overflow:hidden}
+    .kondate-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--mist)}
+    .kondate-cell{background:var(--warm);position:relative;min-height:200px;display:flex;flex-direction:column}
+    .kondate-cell-img{flex:1;display:flex;align-items:center;justify-content:center;background:var(--cream);overflow:hidden}
+    .kondate-cell-img img{width:100%;height:200px;object-fit:cover;display:block;cursor:zoom-in;transition:opacity .2s}
+    .kondate-cell-img img:hover{opacity:.85}
+    .kondate-placeholder{text-align:center;padding:40px 24px;color:var(--stone);width:100%}
+    .kondate-placeholder .pi{font-size:36px;margin-bottom:8px}
+    .kondate-placeholder .pt{font-size:12px;letter-spacing:.1em}
 
-    .menu-ex-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-    .menu-ex-card { background: white; border: 1px solid var(--mist); overflow: hidden; }
-    .menu-ex-badge { font-size: 11px; letter-spacing: .25em; padding: 6px 16px; font-weight: 700; }
-    .menu-ex-badge.original { background: var(--rust); color: white; }
-    .menu-ex-badge.special  { background: var(--gold); color: white; }
-    .menu-ex-img-wrap { min-height: 220px; background: var(--cream); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .menu-ex-img-wrap img { width: 100%; height: 220px; object-fit: cover; display: block; cursor: zoom-in; transition: opacity .2s; }
-    .menu-ex-img-wrap img:hover { opacity: .85; }
+    /* メニュー例 */
+    .menu-ex-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .menu-ex-card{background:white;border:1px solid var(--mist);overflow:hidden}
+    .menu-ex-badge{font-size:11px;letter-spacing:.25em;padding:6px 16px;font-weight:700}
+    .menu-ex-badge.original{background:var(--rust);color:white}
+    .menu-ex-badge.special{background:var(--gold);color:white}
+    .menu-ex-img-wrap{min-height:220px;background:var(--cream);display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .menu-ex-img-wrap img{width:100%;height:220px;object-fit:cover;display:block;cursor:zoom-in;transition:opacity .2s}
+    .menu-ex-img-wrap img:hover{opacity:.85}
+    .menu-ex-placeholder{text-align:center;padding:40px 24px;color:var(--stone)}
+    .menu-ex-body{padding:20px 20px 24px}
+    .menu-ex-name{font-family:'Zen Old Mincho',serif;font-size:17px;letter-spacing:.1em;margin-bottom:8px}
+    .menu-ex-desc{font-size:12.5px;line-height:1.9;color:var(--stone)}
+
+    /* 管理者アップロードバー */
+    .admin-bar{display:none;padding:10px 14px;border-top:1px dashed #e8c0b0;background:#fff8f2;gap:8px;align-items:center;flex-wrap:wrap}
+    body.img-admin .admin-bar{display:flex}
+    .admin-bar label.upload-btn{display:inline-block;background:var(--dark);color:white;font-size:12px;letter-spacing:.15em;padding:7px 16px;cursor:pointer;transition:background .3s;font-family:'Noto Serif JP',serif}
+    .admin-bar label.upload-btn:hover{background:var(--rust)}
+    .admin-bar input[type="file"]{display:none}
+    .admin-bar .delete-btn{background:none;border:1px solid var(--mist);color:var(--stone);font-size:12px;padding:6px 12px;cursor:pointer;transition:border-color .3s,color .3s;font-family:'Noto Serif JP',serif}
+    .admin-bar .delete-btn:hover{border-color:var(--rust);color:var(--rust)}
+    .admin-exit-bar{display:none;position:fixed;top:70px;left:0;right:0;z-index:190;background:var(--rust);color:white;text-align:center;padding:8px;font-size:13px;letter-spacing:.1em}
+    body.img-admin .admin-exit-bar{display:block}
+    .admin-exit-bar button{background:none;border:1px solid rgba(255,255,255,.5);color:white;font-size:12px;padding:4px 16px;cursor:pointer;margin-left:16px;font-family:'Noto Serif JP',serif;letter-spacing:.1em;transition:background .2s}
+    .admin-exit-bar button:hover{background:rgba(255,255,255,.2)}
+
+    /* 管理者パスワードモーダル */
+    .admin-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;align-items:center;justify-content:center}
+    .admin-modal.open{display:flex}
+    .admin-modal-box{background:white;padding:36px 40px;max-width:340px;width:90%;text-align:center}
+    .admin-modal-box h3{font-family:'Zen Old Mincho',serif;font-size:16px;letter-spacing:.15em;margin-bottom:20px;color:var(--ink)}
+    .admin-modal-box input{border:1px solid var(--mist);padding:9px 14px;font-size:14px;width:100%;margin-bottom:12px;outline:none;font-family:'Noto Serif JP',serif}
+    .admin-modal-box input:focus{border-color:var(--gold)}
+    .admin-modal-box button{background:var(--rust);color:white;border:none;padding:9px 28px;font-size:13px;letter-spacing:.1em;cursor:pointer;font-family:'Noto Serif JP',serif;transition:background .2s}
+    .admin-modal-box button:hover{background:#5a2015}
+    .admin-modal-error{color:var(--rust);font-size:12px;margin-top:6px;display:none}
+    .admin-modal-cancel{display:inline-block;margin-left:10px;font-size:12px;color:var(--stone);cursor:pointer;text-decoration:underline}
 
     /* ライトボックス */
-    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.88); z-index:1000; align-items:center; justify-content:center; cursor:zoom-out; }
-    .lightbox.open { display:flex; }
-    .lightbox img { width:90vw; max-width:960px; max-height:94vh; object-fit:contain; box-shadow:0 8px 48px rgba(0,0,0,.6); animation:lbIn .25s ease; }
-    .lightbox-close { position:absolute; top:20px; right:28px; color:white; font-size:36px; cursor:pointer; line-height:1; opacity:.8; transition:opacity .2s; }
-    .lightbox-close:hover { opacity:1; }
-    @keyframes lbIn { from { opacity:0; transform:scale(.92); } to { opacity:1; transform:scale(1); } }
-    .menu-ex-placeholder { text-align: center; padding: 40px 24px; color: var(--stone); }
-    .menu-ex-body { padding: 20px 20px 24px; }
-    .menu-ex-name { font-family: 'Zen Old Mincho', serif; font-size: 17px; letter-spacing: .1em; margin-bottom: 8px; }
-    .menu-ex-desc { font-size: 12.5px; line-height: 1.9; color: var(--stone); }
-    .admin-upload-row { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border-top: 1px dashed var(--mist); background: #fffdf8; }
+    .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1000;align-items:center;justify-content:center;cursor:zoom-out}
+    .lightbox.open{display:flex}
+    .lightbox img{width:90vw;max-width:960px;max-height:94vh;object-fit:contain;box-shadow:0 8px 48px rgba(0,0,0,.6);animation:lbIn .25s ease}
+    .lightbox-close{position:absolute;top:20px;right:28px;color:white;font-size:36px;cursor:pointer;line-height:1;opacity:.8;transition:opacity .2s}
+    .lightbox-close:hover{opacity:1}
+    @keyframes lbIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
 
-    .admin-upload-row { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border-top: 1px dashed var(--mist); background: #fffdf8; }
-    .upload-btn { display: inline-block; background: var(--dark); color: white; font-size: 12px; letter-spacing: .15em; padding: 8px 18px; cursor: pointer; transition: background .3s; }
-    .upload-btn:hover { background: var(--rust); }
-    .delete-btn { background: none; border: 1px solid var(--mist); color: var(--stone); font-size: 12px; padding: 7px 14px; cursor: pointer; transition: border-color .3s, color .3s; }
-    .delete-btn:hover { border-color: var(--rust); color: var(--rust); }
-
-    @media (max-width: 600px) { .menu-ex-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 768px) {
-      header { padding:0 16px; height:60px; } .logo-main { font-size:17px; } .logo-sub { font-size:8px; }
-      nav { display:none; } .hamburger { display:flex !important; }
-      .breadcrumb { padding:12px 16px; } .content { padding:40px 16px; }
-      .page-hero { height:200px; } .page-hero::after { top:12px; left:16px; right:16px; bottom:12px; }
-      .features-grid { grid-template-columns:1fr; }
-      .uses-grid { grid-template-columns:repeat(2,1fr); }
-      .flow-item { gap:12px; } .flow-num { font-size:24px; width:32px; }
-      .cta-box { padding:32px 20px; } .cta-tel { font-size:28px; }
-      footer { padding:36px 20px; } .footer-nav { flex-direction:column; gap:8px; }
+    @media(max-width:600px){.menu-ex-grid{grid-template-columns:1fr}}
+    @media(max-width:768px){
+      header{padding:0 16px;height:60px}.logo-main{font-size:17px}.logo-sub{font-size:8px}
+      nav{display:none}.hamburger{display:flex!important}
+      .breadcrumb{padding:12px 16px}.content{padding:40px 16px}
+      .page-hero{height:200px}.page-hero::after{top:12px;left:16px;right:16px;bottom:12px}
+      .features-grid{grid-template-columns:1fr}
+      .uses-grid{grid-template-columns:repeat(2,1fr)}
+      .flow-item{gap:12px}.flow-num{font-size:24px;width:32px}
+      .cta-box{padding:32px 20px}.cta-tel{font-size:28px}
+      footer{padding:36px 20px}.footer-nav{flex-direction:column;gap:8px}
+      .kondate-grid{grid-template-columns:1fr}
     }
-    .hamburger { display:none; flex-direction:column; justify-content:center; gap:5px; width:36px; height:36px; cursor:pointer; background:none; border:none; padding:4px; }
-    .hamburger span { display:block; width:22px; height:2px; background:var(--ink); border-radius:2px; transition:all .3s; }
-    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity:0; }
-    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
-    .sp-nav { display:none; position:fixed; top:60px; left:0; right:0; background:rgba(251,248,242,0.98); backdrop-filter:blur(12px); border-bottom:1px solid var(--mist); z-index:150; padding:8px 0 16px; box-shadow:0 8px 24px rgba(0,0,0,.08); }
-    .sp-nav a { display:block; padding:14px 24px; text-decoration:none; font-size:14px; letter-spacing:.15em; color:var(--stone); border-bottom:1px solid var(--mist); }
-    .sp-nav .sp-tel { display:block; padding:16px 24px 8px; font-family:'Shippori Mincho B1',serif; font-size:22px; font-weight:700; color:var(--rust); }
-
-    
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .sp-nav{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(251,248,242,.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--mist);z-index:150;padding:8px 0 16px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .sp-nav a{display:block;padding:14px 24px;text-decoration:none;font-size:14px;letter-spacing:.15em;color:var(--stone);border-bottom:1px solid var(--mist)}
+    .sp-nav .sp-tel{display:block;padding:16px 24px 8px;font-family:'Shippori Mincho B1',serif;font-size:22px;font-weight:700;color:var(--rust)}
   </style>
 </head>
 <body id="top">
+
+<!-- 管理者モード帯 -->
+<div class="admin-exit-bar">
+  📷 画像管理モード中　各画像の下にある「画像を変更」ボタンで写真を差し替えできます
+  <button onclick="exitAdmin()">終了</button>
+</div>
 
 <header>
   <a href="index.html" class="logo">
@@ -181,6 +209,7 @@
   </nav>
   <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </header>
+
 <div class="sp-nav" id="spNav">
   <span class="sp-tel">0120-139-884</span>
   <a href="index.html">ホーム</a>
@@ -189,6 +218,11 @@
   <a href="kyushoku.html">給食弁当</a>
   <a href="contact.html">お問い合わせ</a>
 </div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-en">KYUSHOKU BENTO</div>
+    <h1 class="page-hero-title">給食弁当</h1>
   </div>
 </div>
 
@@ -211,59 +245,54 @@
   <div class="menu-section reveal">
     <h2>はやしの給食弁当の特徴</h2>
     <div class="features-grid">
-      <div class="feature-item">
-        <div class="feature-icon">🚚</div>
-        <div class="feature-name">エリア内配達</div>
-        <div class="feature-desc">三田市・丹波篠山市・神戸市北区への定期配達に対応しています。</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🥗</div>
-        <div class="feature-name">栄養バランス配慮</div>
-        <div class="feature-desc">毎日食べても飽きない、バランスのとれた献立をご提供します。</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">📋</div>
-        <div class="feature-name">人数・日程に柔軟対応</div>
-        <div class="feature-desc">少人数から大口まで、曜日・配達スケジュールもご相談ください。</div>
-      </div>
+      <div class="feature-item"><div class="feature-icon">🚚</div><div class="feature-name">エリア内配達</div><div class="feature-desc">三田市・丹波篠山市・神戸市北区への定期配達に対応しています。</div></div>
+      <div class="feature-item"><div class="feature-icon">🥗</div><div class="feature-name">栄養バランス配慮</div><div class="feature-desc">毎日食べても飽きない、バランスのとれた献立をご提供します。</div></div>
+      <div class="feature-item"><div class="feature-icon">📋</div><div class="feature-name">人数・日程に柔軟対応</div><div class="feature-desc">少人数から大口まで、曜日・配達スケジュールもご相談ください。</div></div>
     </div>
   </div>
 
-  <!-- ══ 今月の献立 ══ -->
+  <!-- 今月の献立 -->
   <div class="menu-section reveal" id="kongetsu">
-    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; padding-bottom:12px; border-bottom:1px solid var(--mist); position:relative;">
-      <h2 style="margin-bottom:0; padding-bottom:0; border-bottom:none;">今月の献立</h2>
-      <button onclick="printKondate()" style="background:var(--dark); color:white; border:none; padding:10px 24px; font-family:'Noto Serif JP',serif; font-size:13px; letter-spacing:.2em; cursor:pointer; display:flex; align-items:center; gap:8px; transition:background .3s;" onmouseover="this.style.background='var(--rust)'" onmouseout="this.style.background='var(--dark)'">
-        🖨️ 印刷する
-      </button>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--mist);">
+      <h2 style="margin-bottom:0;padding-bottom:0;border-bottom:none;">今月の献立</h2>
+      <button onclick="printKondate()" style="background:var(--dark);color:white;border:none;padding:10px 24px;font-family:'Noto Serif JP',serif;font-size:13px;letter-spacing:.2em;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background .3s;" onmouseover="this.style.background='var(--rust)'" onmouseout="this.style.background='var(--dark)'">🖨️ 印刷する</button>
     </div>
     <div class="schedule-box">
-      <div id="kondateGrid" style="display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--mist);">
-        <div class="schedule-img-wrap">
-          <img src="kondate1.jpg" alt="献立①" style="width:100%; height:auto; display:block; cursor:zoom-in;"
-            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>準備中</div></div>'"
-            onclick="openLb(this.src)">
+      <div class="kondate-grid" id="kondateGrid">
+        <!-- 献立1〜4 -->
+        <div class="kondate-cell" id="cell-kondate1">
+          <div class="kondate-cell-img" id="wrap-kondate1"></div>
+          <div class="admin-bar">
+            <label class="upload-btn">📷 画像を変更<input type="file" accept="image/*" onchange="uploadImg('kondate1',this)"></label>
+            <button class="delete-btn" onclick="deleteImg('kondate1')">削除</button>
+          </div>
         </div>
-        <div class="schedule-img-wrap">
-          <img src="kondate2.jpg" alt="献立②" style="width:100%; height:auto; display:block; cursor:zoom-in;"
-            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>準備中</div></div>'"
-            onclick="openLb(this.src)">
+        <div class="kondate-cell" id="cell-kondate2">
+          <div class="kondate-cell-img" id="wrap-kondate2"></div>
+          <div class="admin-bar">
+            <label class="upload-btn">📷 画像を変更<input type="file" accept="image/*" onchange="uploadImg('kondate2',this)"></label>
+            <button class="delete-btn" onclick="deleteImg('kondate2')">削除</button>
+          </div>
         </div>
-        <div class="schedule-img-wrap">
-          <img src="kondate3.jpg" alt="献立③" style="width:100%; height:auto; display:block; cursor:zoom-in;"
-            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>準備中</div></div>'"
-            onclick="openLb(this.src)">
+        <div class="kondate-cell" id="cell-kondate3">
+          <div class="kondate-cell-img" id="wrap-kondate3"></div>
+          <div class="admin-bar">
+            <label class="upload-btn">📷 画像を変更<input type="file" accept="image/*" onchange="uploadImg('kondate3',this)"></label>
+            <button class="delete-btn" onclick="deleteImg('kondate3')">削除</button>
+          </div>
         </div>
-        <div class="schedule-img-wrap">
-          <img src="kondate4.jpg" alt="献立④" style="width:100%; height:auto; display:block; cursor:zoom-in;"
-            onerror="this.parentNode.innerHTML='<div class=\'schedule-placeholder\'><div class=\'placeholder-icon\'>📅</div><div class=\'placeholder-text\'>準備中</div></div>'"
-            onclick="openLb(this.src)">
+        <div class="kondate-cell" id="cell-kondate4">
+          <div class="kondate-cell-img" id="wrap-kondate4"></div>
+          <div class="admin-bar">
+            <label class="upload-btn">📷 画像を変更<input type="file" accept="image/*" onchange="uploadImg('kondate4',this)"></label>
+            <button class="delete-btn" onclick="deleteImg('kondate4')">削除</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ══ メニュー例 ══ -->
+  <!-- メニュー例 -->
   <div class="menu-section reveal" id="menurei">
     <h2>メニュー例</h2>
     <div class="menu-ex-grid">
@@ -271,10 +300,10 @@
       <!-- オリジナル -->
       <div class="menu-ex-card">
         <div class="menu-ex-badge original">オリジナル</div>
-        <div class="menu-ex-img-wrap">
-          <img src="original.jpg" alt="オリジナルメニュー" style="width:100%; height:220px; object-fit:cover; display:block; cursor:zoom-in;"
-            onerror="this.parentNode.innerHTML='<div class=\'menu-ex-placeholder\'><div class=\'placeholder-icon\'>🍱</div><div class=\'placeholder-text\'>オリジナルメニュー<br>画像準備中</div></div>'"
-            onclick="openLb(this.src)">
+        <div class="menu-ex-img-wrap" id="wrap-original"></div>
+        <div class="admin-bar">
+          <label class="upload-btn">📷 画像を変更<input type="file" accept="image/*" onchange="uploadImg('original',this)"></label>
+          <button class="delete-btn" onclick="deleteImg('original')">削除</button>
         </div>
         <div class="menu-ex-body">
           <div class="menu-ex-name">オリジナル弁当</div>
@@ -285,10 +314,10 @@
       <!-- スペシャル -->
       <div class="menu-ex-card">
         <div class="menu-ex-badge special">スペシャル</div>
-        <div class="menu-ex-img-wrap">
-          <img src="special.jpg" alt="スペシャルメニュー" style="width:100%; height:220px; object-fit:cover; display:block; cursor:zoom-in;"
-            onerror="this.parentNode.innerHTML='<div class=\'menu-ex-placeholder\'><div class=\'placeholder-icon\'>✨</div><div class=\'placeholder-text\'>スペシャルメニュー<br>画像準備中</div></div>'"
-            onclick="openLb(this.src)">
+        <div class="menu-ex-img-wrap" id="wrap-special"></div>
+        <div class="admin-bar">
+          <label class="upload-btn">📷 画像を変更<input type="file" accept="image/*" onchange="uploadImg('special',this)"></label>
+          <button class="delete-btn" onclick="deleteImg('special')">削除</button>
         </div>
         <div class="menu-ex-body">
           <div class="menu-ex-name">スペシャル弁当</div>
@@ -318,29 +347,21 @@
     <ul class="flow-list">
       <li class="flow-item">
         <div class="flow-num">1</div>
-        <div class="flow-body">
-          <div class="flow-title">お問い合わせ</div>
-          <div class="flow-desc">まずはお電話（0120-139-884）またはLINEにてご連絡ください。配達エリア・人数・ご希望をお聞かせください。</div>
-        </div>
+        <div class="flow-body"><div class="flow-title">お問い合わせ</div><div class="flow-desc">まずはお電話（0120-139-884）またはLINEにてご連絡ください。配達エリア・人数・ご希望をお聞かせください。</div></div>
       </li>
       <li class="flow-item">
         <div class="flow-num">2</div>
-        <div class="flow-body">
-          <div class="flow-title">お見積もり・内容確認</div>
-          <div class="flow-desc">人数・配達日・ご予算をもとにお見積もりをご提案いたします。</div>
-        </div>
+        <div class="flow-body"><div class="flow-title">お見積もり・内容確認</div><div class="flow-desc">人数・配達日・ご予算をもとにお見積もりをご提案いたします。</div></div>
       </li>
       <li class="flow-item">
         <div class="flow-num">3</div>
-        <div class="flow-body">
-          <div class="flow-title">定期配達スタート</div>
-          <div class="flow-desc">ご契約後、指定の時間に毎日お届けします。変更・休止もお気軽にご相談ください。</div>
-        </div>
+        <div class="flow-body"><div class="flow-title">定期配達スタート</div><div class="flow-desc">ご契約後、指定の時間に毎日お届けします。変更・休止もお気軽にご相談ください。</div></div>
       </li>
     </ul>
   </div>
 
   <div class="note-box reveal">
+    ※ご注文は1週間前までにお願いしております。<br>
     ※配達エリア・最低注文数については事前にご確認ください。<br>
     ※配達時間・献立内容はご要望に応じて調整いたします。<br>
     ※まずはお気軽にお電話またはLINEにてご相談ください。
@@ -358,10 +379,17 @@
   <div class="footer-logo-main">仕出し　はやし</div>
   <div class="footer-addr">〒669-1357 兵庫県三田市東本庄578-2　TEL: 0120-139-884 ／ 079-568-1011<br>営業時間: 8:00〜18:00　年中無休</div>
   <nav class="footer-nav">
-    <a href="index.html">ホーム</a><a href="kaiseki.html">会席料理</a><a href="makunouchi.html">幕の内弁当</a><a href="kyushoku.html">給食弁当</a>
+    <a href="index.html">ホーム</a>
+    <a href="kaiseki.html">会席料理</a>
+    <a href="makunouchi.html">幕の内弁当</a>
+    <a href="kyushoku.html">給食弁当</a>
   </nav>
-  <p class="footer-copy">© 株式会社はやし. All Rights Reserved.</p>
+  <p class="footer-copy">
+    © 株式会社はやし給食. All Rights Reserved.
+    <span class="admin-footer-link" onclick="openAdminModal()">●</span>
+  </p>
 </footer>
+
 <a href="#top" class="page-top" id="pageTop">▲</a>
 
 <!-- ライトボックス -->
@@ -370,51 +398,115 @@
   <img id="lbImg" src="" alt="">
 </div>
 
+<!-- 管理者パスワードモーダル -->
+<div class="admin-modal" id="adminModal">
+  <div class="admin-modal-box">
+    <h3>管理者ログイン</h3>
+    <input type="password" id="adminPw" placeholder="パスワードを入力" onkeydown="if(event.key==='Enter')adminLogin()">
+    <div class="admin-modal-error" id="adminError">パスワードが違います</div>
+    <div style="margin-top:16px;">
+      <button onclick="adminLogin()">ログイン</button>
+      <span class="admin-modal-cancel" onclick="closeAdminModal()">キャンセル</span>
+    </div>
+  </div>
+</div>
+
 <script>
-  const hb = document.getElementById('hamburger');
-  const sn = document.getElementById('spNav');
-  if(hb) hb.addEventListener('click', () => { hb.classList.toggle('open'); sn.style.display = sn.style.display==='block'?'none':'block'; });
+/* ハンバーガー */
+const hb=document.getElementById('hamburger'),sn=document.getElementById('spNav');
+sn.style.display='none';
+hb.addEventListener('click',()=>{hb.classList.toggle('open');sn.style.display=sn.style.display==='block'?'none':'block'});
 
-  // 印刷
-  function printKondate() {
-    const imgs = document.querySelectorAll('#kondateGrid img');
-    let html = '<html><head><title>今月の献立</title><style>';
-    html += '* { margin:0; padding:0; box-sizing:border-box; }';
-    html += 'body { background:white; }';
-    html += '.page { width:210mm; height:297mm; display:flex; align-items:center; justify-content:center; page-break-after:always; }';
-    html += '.page:last-child { page-break-after:avoid; }';
-    html += 'img { max-width:200mm; max-height:287mm; object-fit:contain; }';
-    html += '@page { size:A4; margin:0; }';
-    html += '</style></head><body>';
-    imgs.forEach(img => {
-      if (img.src && !img.src.endsWith('/') && img.naturalWidth > 0) {
-        html += `<div class="page"><img src="${img.src}"></div>`;
-      }
-    });
-    html += '</body></html>';
-    const w = window.open('', '_blank');
-    w.document.write(html);
-    w.document.close();
-    w.onload = () => { w.print(); };
+/* ページトップ */
+const pt=document.getElementById('pageTop');
+window.addEventListener('scroll',()=>pt.classList.toggle('visible',window.scrollY>300));
+
+/* Reveal */
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('shown');obs.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ライトボックス */
+function openLb(src){document.getElementById('lbImg').src=src;document.getElementById('lightbox').classList.add('open')}
+const lb=document.getElementById('lightbox');
+document.getElementById('lbClose').addEventListener('click',()=>lb.classList.remove('open'));
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');closeAdminModal()}});
+
+/* 印刷 */
+function printKondate(){
+  const imgs=document.querySelectorAll('#kondateGrid img');
+  let html='<html><head><title>今月の献立</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:white}.page{width:210mm;height:297mm;display:flex;align-items:center;justify-content:center;page-break-after:always}.page:last-child{page-break-after:avoid}img{max-width:200mm;max-height:287mm;object-fit:contain}@page{size:A4;margin:0}</style></head><body>';
+  imgs.forEach(img=>{if(img.src&&img.naturalWidth>0)html+=`<div class="page"><img src="${img.src}"></div>`});
+  html+='</body></html>';
+  const w=window.open('','_blank');w.document.write(html);w.document.close();w.onload=()=>w.print();
+}
+
+/* ══ 画像管理システム ══ */
+const ADMIN_PW='hayashi1011';
+const IMG_PREFIX='hayashi_kyushoku_img_';
+
+const IMG_KEYS=['kondate1','kondate2','kondate3','kondate4','original','special'];
+const LABELS={kondate1:'献立①',kondate2:'献立②',kondate3:'献立③',kondate4:'献立④',original:'オリジナル弁当',special:'スペシャル弁当'};
+
+function renderImg(key){
+  const wrap=document.getElementById('wrap-'+key);
+  if(!wrap)return;
+  const src=localStorage.getItem(IMG_PREFIX+key);
+  if(src){
+    wrap.innerHTML=`<img src="${src}" alt="${LABELS[key]}" onclick="openLb(this.src)">`;
+  }else{
+    wrap.innerHTML=`<div class="${key.startsWith('kondate')?'kondate-placeholder':'menu-ex-placeholder'}"><div class="pi" style="font-size:36px;margin-bottom:8px">${key.startsWith('kondate')?'📅':'🍱'}</div><div class="pt" style="font-size:12px;letter-spacing:.1em">準備中</div></div>`;
   }
+}
 
-  // ライトボックス
-  function openLb(src) {
-    document.getElementById('lbImg').src = src;
-    document.getElementById('lightbox').classList.add('open');
+function uploadImg(key,input){
+  const file=input.files[0];
+  if(!file)return;
+  if(file.size>3*1024*1024){alert('画像サイズは3MB以下にしてください');return}
+  const reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      localStorage.setItem(IMG_PREFIX+key,e.target.result);
+      renderImg(key);
+    }catch(err){
+      alert('保存容量が不足しています。他の画像を削除してから再試行してください。');
+    }
+  };
+  reader.readAsDataURL(file);
+  input.value='';
+}
+
+function deleteImg(key){
+  if(!confirm(`「${LABELS[key]}」の画像を削除しますか？`))return;
+  localStorage.removeItem(IMG_PREFIX+key);
+  renderImg(key);
+}
+
+function exitAdmin(){document.body.classList.remove('img-admin')}
+
+/* 管理者ログイン */
+function openAdminModal(){
+  document.getElementById('adminPw').value='';
+  document.getElementById('adminError').style.display='none';
+  document.getElementById('adminModal').classList.add('open');
+  setTimeout(()=>document.getElementById('adminPw').focus(),100);
+}
+function closeAdminModal(){document.getElementById('adminModal').classList.remove('open')}
+function adminLogin(){
+  const pw=document.getElementById('adminPw').value;
+  if(pw===ADMIN_PW){
+    closeAdminModal();
+    document.body.classList.add('img-admin');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }else{
+    document.getElementById('adminError').style.display='block';
+    document.getElementById('adminPw').value='';
+    document.getElementById('adminPw').focus();
   }
-  const lb = document.getElementById('lightbox');
-  document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('open'));
-  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+}
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); observer.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  const pt = document.getElementById('pageTop');
-  window.addEventListener('scroll', () => pt.classList.toggle('visible', window.scrollY > 300));
-
+/* 初期描画 */
+IMG_KEYS.forEach(renderImg);
 </script>
 </body>
 </html>
